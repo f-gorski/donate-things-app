@@ -8,18 +8,26 @@ import {
     Route
 } from 'react-router-dom';
 
-import Home from './components/Home/Home';
+import Home from './components/Home';
 import Nav from './components/Navigation';
+import LogIn from './components/LogIn';
+import Register from './components/Register';
 
 function App() {
   return (
     <div className="App">
       <HashRouter>
         <Nav/>
-        
+
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/logowanie">
+            <LogIn />
+          </Route>
+          <Route path="/rejestracja">
+            <Register />
           </Route>
         </Switch>
       </HashRouter>
