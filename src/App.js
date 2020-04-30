@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {
@@ -13,8 +13,17 @@ import Nav from './components/Navigation';
 import LogIn from './components/LogIn';
 import Register from './components/Register';
 
+export const AppContext = createContext()
+
 function App() {
+  const [state, setState] = useState({})
+  const update = (value) => {
+    setState(prevState => ({
+      ...prevState, value
+  }))
+  }
   return (
+    <AppContext.Provider value={{state, update}}>
     <div className="App">
       <HashRouter>
         <Nav/>
@@ -32,6 +41,7 @@ function App() {
         </Switch>
       </HashRouter>
     </div>
+    </AppContext.Provider>
   );
 }
 

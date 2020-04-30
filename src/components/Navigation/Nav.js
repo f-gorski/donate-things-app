@@ -23,11 +23,11 @@ const NavTop = () => {
 const NavBottom = () => {
     return (
             <ul>
-                <li><LinkScroll to="start" smooth={true}><Link>Start</Link></LinkScroll></li>
-                <li><LinkScroll to="desc" smooth={true}><Link>O co chodzi></Link></LinkScroll></li>
-                <li><LinkScroll to="about" smooth={true}><Link>O nas</Link></LinkScroll></li>
-                <li><LinkScroll to="orgs" smooth={true}><Link>Fundacje i organizacje</Link></LinkScroll></li>
-                <li><LinkScroll to="contact" smooth={true}><Link>Kontakt</Link></LinkScroll></li>
+                <li><LinkScroll to="start" smooth={true}>Start</LinkScroll></li>
+                <li><LinkScroll to="desc" smooth={true}>O co chodzi></LinkScroll></li>
+                <li><LinkScroll to="about" smooth={true}>O nas</LinkScroll></li>
+                <li><LinkScroll to="orgs" smooth={true}>Fundacje i organizacje</LinkScroll></li>
+                <li><LinkScroll to="contact" smooth={true}>Kontakt</LinkScroll></li>
             </ul>
     )
 }
