@@ -30,3 +30,16 @@ section {
   position: relative;
 }
 
+.about {
+  background-image: url('./assets/People.jpg');
+}
+
+.three-columns,
+.simple-steps {
+  display: flex;
+}
+
+#about {
+  display: flex;
+}
+

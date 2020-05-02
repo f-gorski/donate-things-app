@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 const Start = (props) => {
     return (
         <section id={props.id}>
@@ -7,11 +9,10 @@ const Start = (props) => {
             <header>
                 <h1>Zacznij pomagać! <br/> Oddaj niechciane rzeczy w zaufane ręce</h1>
                 <div>
-                    <button>Oddaj rzeczy</button>
-                    <button>Zorganizuj zbiórkę</button>
+                    <Link to={'/logowanie'}>Oddaj rzeczy</Link>
+                    <Link to={'/logowanie'}>Zorganizuj zbiórkę</Link>
                 </div>
             </header>
-            
         </section>
     )
 }

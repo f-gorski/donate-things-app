@@ -1,5 +1,7 @@
 import React, { createContext, useState } from 'react';
-import logo from './logo.svg';
+import Firebase from "firebase";
+import config from "./config";
+
 import './App.css';
 import {
     HashRouter,
@@ -13,15 +15,24 @@ import Nav from './components/Navigation';
 import LogIn from './components/LogIn';
 import Register from './components/Register';
 
-export const AppContext = createContext()
+//FIrebase initialization
+Firebase.initializeApp(config);
+
+export const AppContext = createContext({})
 
 function App() {
-  const [state, setState] = useState({})
+  //application state initialization
+  const [state, setState] = useState({type: "", organisation: {}})
+
   const update = (value) => {
-    setState(prevState => ({
-      ...prevState, value
-  }))
+    setState(value)
   }
+
+  const organisationsRef = Firebase.database().ref('organisations');
+    organisationsRef.on('value', (snapshot) => {
+    console.log(snapshot.val())
+    })
+
   return (
     <AppContext.Provider value={{state, update}}>
     <div className="App">
