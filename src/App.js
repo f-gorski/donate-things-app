@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 import Firebase from "firebase";
-import config from "./config";
+import firebaseConfig from "./config";
 
 import './App.css';
 import {
@@ -16,7 +16,7 @@ import LogIn from './components/LogIn';
 import Register from './components/Register';
 
 //FIrebase initialization
-Firebase.initializeApp(config);
+Firebase.initializeApp(firebaseConfig);
 
 export const AppContext = createContext({})
 
