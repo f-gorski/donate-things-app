@@ -50,7 +50,7 @@ const SimpleSteps = (props) => {
         <div className={props.className}>
             {stepsToRender}
         </div>
-        <Link to='/logowanie'>
+        <Link to='/oddaj-rzeczy'>
             ODDAJ RZECZY
         </Link>
         </>

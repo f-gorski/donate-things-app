@@ -1,43 +1,29 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { AppContext } from '../../App';
 
-import Foundations from './Foundations';
-import NonGov from './NonGov';
-import Collects from './Collects';
+import OrganisationsList from './OrganisationsList';
 
 
 const Organisations = (props) => {
-    const stateContext = useContext(AppContext);
+    const {getData} = useContext(AppContext);
 
-    // getOrgData = (id) => {
-    //     const organisationsRef = Firebase.database().ref(`organisations/${id}`);
-    //     organisationsRef.on("value", snapshot => {
-    //       const newState = snapshot.val();
-    //       update({organisation: newState})
-    //     });
-    //   };
+    const [items, setItems] = useState(false);
+    const [type, setType] = useState('fundacjom');
 
-    //nie ma to być w switchu
-    const switchRender = (type) => {
-        let typeToRender = null;
-        switch(type) {
-            case "foundations":
-                typeToRender = <Foundations />;
-                break;
-            case "nonGov":
-                typeToRender = <NonGov />;
-                break;
-            case "collects":
-                typeToRender = <Collects />;
-                break;
-        }
-        return typeToRender;
-    }
-
-    //alternatywny sposób
     useEffect( () => {
-        console.log("zmienił się stateContext.state.type")
-    }, [stateContext.state.type])
+        getData(type)
+            .then((data) => data.filter((element) => {
+                return element.name.toLowerCase() === type
+            }))
+            .then((data) => {
+                setItems([...data[0].items]);
+            })
+    }, [type])
+
+    const handleClick = (e) => {
+        setType(e.target.name);
+        console.log(items)
+    }
 
     return (
         <section id={props.id}>
@@ -45,16 +31,14 @@ const Organisations = (props) => {
             <hr style={{height: "1px", width: "15%"}}/>
             <div>
                 <div>
-                    {
-                    //na kliku ma się odpalić useEffect i w callbacku ma mieć filter na całej liście pobranej z bazy danych wg 'name' i ma zwrócić do state zawartość items które idą do propsów generycznego komponentu który to renderuje
-                    }
-                    <button onClick={() => stateContext.update({type: "foundations"})}>Fundacjom</button>
-                    <button onClick={() => stateContext.update({type: "nonGov"})}>Organizacjom pozarządowym</button>
-                    <button onClick={() => stateContext.update({type: "collects"})}>Lokalnym zbiórkom</button>
+                    <button name="fundacjom" onClick={handleClick}>Fundacjom</button>
+                    <button name="organizacjom" onClick={handleClick}>Organizacjom pozarządowym</button>
+                    <button name="zbiórkom" onClick={handleClick}>Lokalnym zbiórkom</button>
                 </div>
                 <p>Lorem ipsum</p>
             </div>
-            {switchRender(stateContext.state.type)}
+
+            {items ? <OrganisationsList items={items} /> : null}
         </section>
     )
 }
