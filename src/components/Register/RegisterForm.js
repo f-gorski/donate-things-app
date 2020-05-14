@@ -4,6 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 
 const RegisterForm = () => {
     const {firebase, userForm, setUserForm, error, userInitial, userAuth, setUserAuth} = useContext(AppContext);
+    const history = useHistory();
 
     console.log(userForm);
     const {email, passwordOne, passwordTwo} = userForm;
@@ -20,8 +21,7 @@ const RegisterForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email, passwordOne)
-        
- 
+
         firebase
         .auth()
         .createUserWithEmailAndPassword(email, passwordOne)

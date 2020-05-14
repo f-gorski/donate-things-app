@@ -16,9 +16,9 @@ import Nav from './components/Navigation';
 import LogInForm from './components/LogIn';
 import RegisterForm from './components/Register';
 import LogOut from './components/LogOut';
-import Donate from './components/Home/Donate';
+import Donate from './components/DonateForm/Donate';
 
-//FIrebase initialization
+//Firebase initialization
 export const firebase = Firebase.initializeApp(firebaseConfig);
 
 //Context initialization

@@ -52,6 +52,7 @@ const LogInForm = () => {
                 
                 <button disabled={isInvalid} type="submit">Zaloguj się</button>
                 <Link to='/rejestracja'>Zarejestruj się</Link>
+                
                 {error && <p>{userForm.error.message}</p>}
              </form>
         </>
