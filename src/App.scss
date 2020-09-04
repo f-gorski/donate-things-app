@@ -1,0 +1,15 @@
+@import './scss/reset';
+@import './scss/settings/fonts';
+@import './scss/settings/colors';
+@import './scss/base';
+@import './scss/components/Navigation';
+@import './scss/components/Start';
+@import './scss/components/Description';
+@import './scss/components/SimpleSteps';
+@import './scss/components/About';
+@import './scss/components/Organisations';
+@import './scss/components/Footer.scss';
+
+//@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap';
+@import 'https://fonts.googleapis.com/css?family=Merriweather';

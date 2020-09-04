@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect } from 'react';
 import Firebase from "firebase";
 import firebaseConfig from "./config";
 
-import './App.css';
+import './App.scss';
 import {
     HashRouter,
     Link,
@@ -33,10 +33,18 @@ function App() {
   const getData = async (type) => {
     let data = await organisationsRef.orderByChild(type).once('value')
     return data.val();
-  }  
+  } 
+  
+  // const sendData = (user, formData) => {
+  //   usersRef.child("alanisawesome").set({
+  //     date_of_birth: "June 23, 1912",
+  //     full_name: "Alan Turing"
+  //   });
+  // }
 
-  //Listen for change of authentication of the user
+  const sendData = data => console.log(data)
 
+  //set initial user data as empty
   const USER_INITIAL = {
     email: '',
     passwordOne: "",
@@ -71,7 +79,7 @@ function App() {
     );
 
   return (
-    <AppContext.Provider value={{getData, firebase, userForm, setUserForm, userAuth, setUserAuth, USER_INITIAL}}>
+    <AppContext.Provider value={{getData, sendData, firebase, userForm, setUserForm, userAuth, setUserAuth, USER_INITIAL}}>
     <div className="App">
       <HashRouter>
         <Nav/>

@@ -1,0 +1,42 @@
+.section__orgs {
+    text-align: center;
+}
+
+.orgs__btn {
+    width: 150px;
+    height: 50px;
+    text-decoration: none;
+    color: black;
+    padding: 10px 10px;
+    margin: 10px 20px;
+    border: 1px solid black;
+    background: none;
+}
+
+.orgs__text {
+    display: flex;
+    justify-content: center;
+}
+
+.orgs__text--par {
+    width: 300px;
+}
+
+.orgs__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.orgs__item {
+    height: 100px;
+    width: 600px;
+    border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orgs__headers {
+    text-align: left;
+}

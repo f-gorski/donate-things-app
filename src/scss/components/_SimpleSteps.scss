@@ -1,0 +1,76 @@
+.steps__bar {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.steps__btn-wrapper {
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 80px;
+}
+
+.steps__header {
+    text-align: center;
+    margin: 40px 0;
+
+    .header__text {
+        font-family: $font-base;
+        font-size: 38px;
+        font-weight: normal;
+    }
+}
+
+.steps__simple-steps {
+    height: 325px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.steps__step {
+    width: 130px;
+    height: 170px;
+    margin: 30px;
+    text-align: center;
+    font-family: $font-base;
+}
+
+.step__icon {
+    height: 83px;
+    width: 83px;
+}
+
+.step__header {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.step__text {
+    font-size: 16px;
+}
+
+.decoration-line {
+    border: 1px solid #707070;
+    width: 70px;
+    margin: 10px auto;
+}
+
+.steps__link {
+    font-size: 36px;
+    text-decoration: none;
+    color: $primary-font-color;
+}
+
+.steps__button {
+    cursor: pointer;
+    background: none;
+    width: 310px;
+    height: 120px;
+    border: 0.75px solid $primary-font-color;
+    padding: 13px 93px;
+    text-align: center;
+}
+

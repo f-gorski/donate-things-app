@@ -7,11 +7,14 @@ const Description = (props) => {
     
     return (
         <>
-        <section id={props.id}>
-            <ThreeColumns className={"three-columns"} />
+        <section id={props.id} className="section section__desc">
+            <div className="container">
+                <ThreeColumns className={"section__three-columns"} />
+            </div>
+            
         </section>
-        <section>
-            <SimpleSteps className={"simple-steps"} />
+        <section className="section steps">
+            <SimpleSteps className={"steps__simple-steps"} />
         </section>
         </>
     )

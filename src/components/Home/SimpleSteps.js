@@ -1,12 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Icon1 from '../../assets/Icon-1.svg';
+import Icon2 from '../../assets/Icon-2.svg';
+import Icon3 from '../../assets/Icon-3.svg';
+import Icon4 from '../../assets/Icon-4.svg';
+
 import Step from './Step';
 
 const stepsData = [
     {
         icon: {
-            src: null,
+            src: Icon1,
             alt: "ikona ubranie"
         },
         header: "Wybierz rzeczy",
@@ -14,7 +19,7 @@ const stepsData = [
     },
     {
         icon: {
-            src: null,
+            src: Icon2,
             alt: "ikona torba"
         },
         header: "Spakuj je",
@@ -22,7 +27,7 @@ const stepsData = [
     },
     {
         icon: {
-            src: null,
+            src: Icon3,
             alt: "ikona lupa"
         },
         header: "Zdecyduj komu chcesz pomóc",
@@ -30,7 +35,7 @@ const stepsData = [
     },
     {
         icon: {
-            src: null,
+            src: Icon4,
             alt: "ikona transfer"
         },
         header: "Zamów kuriera",
@@ -43,16 +48,23 @@ const SimpleSteps = (props) => {
 
     return (
         <>
-        <div>
-            <h3>Wystarczą 4 proste kroki</h3>
-            <hr style={{height: "1px", width: "15%"}}/>
+        <div className="steps__header">
+            <h3 clasName="header__text">Wystarczą 4 proste kroki</h3>
+            <img src={require('../../assets/Decoration.svg')} />
         </div>
         <div className={props.className}>
-            {stepsToRender}
+            <div className="container">
+                <div className="steps__bar">
+                    {stepsToRender}
+                </div>
+            
+            </div>
         </div>
-        <Link to='/oddaj-rzeczy'>
-            ODDAJ RZECZY
-        </Link>
+        <div className="steps__btn-wrapper">
+            <button className="steps__button">
+                <Link to='/oddaj-rzeczy' className="steps__link">ODDAJ RZECZY</Link>
+            </button>
+        </div>
         </>
     )
 }

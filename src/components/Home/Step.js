@@ -2,11 +2,11 @@ import React from 'react';
 
 const Step = (props) => {
     return (
-        <div>
-            <img src={props.data.icon.src} alt={props.data.icon.alt} />
-            <h4>{props.data.header}</h4>
-            <hr style={{height: "1px", width: "15%"}}/>
-            <p>{props.data.text}</p>
+        <div className="steps__step">
+            <img src={props.data.icon.src} alt={props.data.icon.alt} className="step__icon"/>
+            <h4 className="step__header">{props.data.header}</h4>
+            <hr className="decoration-line"/>
+            <p className="step__text">{props.data.text}</p>
         </div>
     )
 }

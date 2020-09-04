@@ -1,0 +1,37 @@
+.section__desc {
+    height: 380px;
+    background-image: url('../../assets/Columns-Background.png');
+    display: flex;
+    align-items: center;
+}
+
+.section__three-columns {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    .description__column {
+        width: 334px;
+        height: 252px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+
+        .column__header {
+            font-size: 90px;
+            font-family: $font-base;
+            font-weight: normal;
+        }
+
+        .column__subheader {
+            font-size: 18px;
+            font-family: $font-base;
+        }
+
+        .column__text {
+            font-size: 16px;
+            font-family: $font-alt;
+        }
+    }
+}

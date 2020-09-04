@@ -1,44 +1,56 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll';
 import { AppContext } from '../../App';
 
 
 const Nav = () => {
     return (
-        <nav>
-            <NavTop />
-            <NavBottom />
-        </nav>
+
+        <header className="header">
+            <div className='container'>
+                <nav className="navigation">
+                    <NavTop />
+                    <NavBottom />
+                </nav>
+            </div >
+        </header >
+
     )
 }
 
 const NavTop = (props) => {
-    const {userAuth} = useContext(AppContext);
+    const { userAuth } = useContext(AppContext);
     console.log(userAuth)
-    const notLoggedIn =  
-        <ul>
-            <li><Link to="/logowanie">Zaloguj się</Link></li>
-            <li><Link to="/rejestracja">Zarejestruj się</Link></li>
-        </ul>;
-    const loggedIn = 
-        <ul>
-            <li>Witaj {userAuth ? userAuth.authUser.email : null}</li>
-            <li><Link to="/oddaj-rzeczy">Zaloguj się</Link></li>
-            <li><Link to="/wylogowanie">Wyloguj się</Link></li>
-        </ul>
-    return  userAuth ? loggedIn : notLoggedIn;
+    const notLoggedIn =
+        <div className="navigation">
+            <ul className="navigation__links">
+                <li><NavLink to="/logowanie" className="navigation__top navigation__link" activeClassName="navigation__link--active">Zaloguj</NavLink></li>
+                <li><NavLink to="/rejestracja" className="navigation__top navigation__link" activeClassName="navigation__link--active">Załóż konto</NavLink></li>
+            </ul>
+        </div>;
+    const loggedIn =
+        <div className="navigation navigation__top">
+            <ul className="navigation__links">
+                <li>Cześć {userAuth ? userAuth.authUser.email : null}!</li>
+                <li><NavLink to="/oddaj-rzeczy" className="navigation__top navigation__link" activeClassName="navigation__link--active">Oddaj rzeczy</NavLink></li>
+                <li><NavLink to="/wylogowanie" className="navigation__top navigation__link" activeClassName="navigation__link--active">Wyloguj się</NavLink></li>
+            </ul>
+        </div>
+    return userAuth ? loggedIn : notLoggedIn;
 }
 
 const NavBottom = () => {
     return (
-            <ul>
-                <li><Link to="/">Start</Link></li>
-                <li><LinkScroll to="desc" smooth={true}>O co chodzi></LinkScroll></li>
-                <li><LinkScroll to="about" smooth={true}>O nas</LinkScroll></li>
-                <li><LinkScroll to="orgs" smooth={true}>Fundacje i organizacje</LinkScroll></li>
-                <li><LinkScroll to="contact" smooth={true}>Kontakt</LinkScroll></li>
+        <div className=" navigation">
+            <ul className="navigation__links">
+                <li><NavLink to="/" className="navigation__link--start">Start</NavLink></li>
+                <li><LinkScroll to="desc" smooth={true} className="navigation__link">O co chodzi?</LinkScroll></li>
+                <li><LinkScroll to="about" smooth={true} className="navigation__link">O nas</LinkScroll></li>
+                <li><LinkScroll to="orgs" smooth={true} className="navigation__link">Fundacje i organizacje</LinkScroll></li>
+                <li><LinkScroll to="contact" smooth={true} className="navigation__link">Kontakt</LinkScroll></li>
             </ul>
+        </div>
     )
 }
 

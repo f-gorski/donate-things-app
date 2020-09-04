@@ -22,14 +22,23 @@ const TypePage = () => {
         <>
         <div>Wypełnianie formularza - Krok 1/4</div>
         <form onSubmit={handleSubmit(onSubmit)}>
+            <div>
             <label>ubrania, które nadają się do ponownego użycia</label>
             <input type="radio" name="itemType" ref={register} value="ubrania dobre" />
+            </div>
+            <div>
             <label>ubrania do wyrzucenia</label>
             <input type="radio" name="itemType" ref={register} value="ubrania do wyrzucenia" />
+            </div>
+            <div>
             <label>zabawki</label>
-            <input type="radio" name="itemType" ref={register} value="książki" />
+            <input type="radio" name="itemType" ref={register} value="zabawki" />
+            </div>
+            <div>
             <label>książki</label>
-            
+            <input type="radio" name="itemType" ref={register} value="książki" />
+            </div>
+
             <input type="submit" value="Dalej" />
         </form>
         </>
