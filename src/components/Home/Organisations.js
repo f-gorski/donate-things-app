@@ -27,17 +27,17 @@ const Organisations = (props) => {
 
     return (
         <section id={props.id} className="section section__orgs">
-            <h2>Komu pomagamy?</h2>
-            <hr style={{ height: "1px", width: "15%" }} />
-            <div className="orgs_btns--wrapper">
+            <h2 className="orgs__header">Komu pomagamy?</h2>
+            <img src={require('../../assets/Decoration.svg')} className="decoration"/>
+            <div className="orgs_btns-wrapper">
                 <div className="orgs__btns">
                     <button name="fundacjom" onClick={handleClick} className="orgs__btn">Fundacjom</button>
-                    <button name="organizacjom" onClick={handleClick} className="orgs__btn">Organizacjom pozarządowym</button>
-                    <button name="zbiórkom" onClick={handleClick} className="orgs__btn">Lokalnym zbiórkom</button>
+                    <button name="organizacjom" onClick={handleClick} className="orgs__btn">Organizacjom</button>
+                    <button name="zbiórkom" onClick={handleClick} className="orgs__btn"> Zbiórkom</button>
                 </div>
             </div>
             <div className="orgs__text">
-                <p className="orgs__text--par">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
+                <p className="orgs__text-paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
             </div>
 
 

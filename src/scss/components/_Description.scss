@@ -22,16 +22,21 @@
             font-size: 90px;
             font-family: $font-base;
             font-weight: normal;
+            color: $primary-font-color;
         }
 
         .column__subheader {
             font-size: 18px;
             font-family: $font-base;
+            font-weight: normal;
+            color: $primary-font-color;
+            text-transform: uppercase;
         }
 
         .column__text {
             font-size: 16px;
             font-family: $font-alt;
+            color: $primary-font-color;
         }
     }
 }

@@ -5,10 +5,11 @@ const About = (props) => {
         <section id={props.id} className="section section__about">
             <>
                 <div className="about__wrapper">
-                    <div className="about--text">
-                        <h2>O nas</h2>
-                        <hr style={{ height: "1px", width: "15%" }} />
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+                    <div className="about__text">
+                        <h2 className="about__header">O nas</h2>
+                        <img src={require('../../assets/Decoration.svg')} className="decoration" />
+                        <p className="about__paragraph">Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+                        <img src={require('../../assets/Signature.png')} className="signature" />
                     </div>
                 </div>
                 <div className="about__img-wrapper"></div>

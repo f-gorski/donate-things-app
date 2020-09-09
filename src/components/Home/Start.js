@@ -13,10 +13,10 @@ const Start = (props) => {
                     <img src={require('../../assets/Decoration.svg')} className="decoration"/>
                     <div className="call-to-action__links">
                         <button className="call-to-action__button donate">
-                            <Link to={'/oddaj-rzeczy'} className="call-to-action__link">Oddaj rzeczy</Link>
+                            <Link to={'/oddaj-rzeczy'} className="call-to-action__link">ODDAJ RZECZY</Link>
                         </button>
                         <button className="call-to-action__button organize">
-                            <Link to={'/logowanie'} className="call-to-action__link">Zorganizuj zbiórkę</Link>
+                            <Link to={'/logowanie'} className="call-to-action__link">ZORGANIZUJ ZBIÓRKĘ</Link>
                         </button>
                     </div>
                 </div>

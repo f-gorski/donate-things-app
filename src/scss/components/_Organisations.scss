@@ -1,42 +1,83 @@
 .section__orgs {
     text-align: center;
+
+    .orgs__header {
+        font-family: $font-base;
+        color: $primary-font-color;
+        font-size: 38px;
+        font-weight: normal;
+        margin-top: 70px;
+    }
+
+    .orgs_btns-wrapper {
+        align-items: center;
+        margin-bottom: 70px;
+    }
+    
+    .orgs__btn {
+        cursor: pointer;
+        background: none;
+        width: 210px;
+        height: 85px;
+        border: 0.75px solid $primary-font-color;
+        padding: 20px 40px;
+        text-align: center;
+        font-family: $font-base;
+        color: $primary-font-color;
+        font-size: 24px;
+        margin: 0 30px;
+    }
+    
+    .orgs__text {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .orgs__text-paragraph {
+        width: 500px;
+        font-size: 22px;
+        font-family: $font-base;
+        color: $primary-font-color;
+        margin-bottom: 65px;
+    }
+    
+    .orgs__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .orgs__item {
+        width: 600px;
+        border-bottom: 1px solid $primary-font-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .orgs__headers {
+        text-align: left;
+    }
+
+    .orgs__header {
+        font-size: 26px;
+        font-family: $font-alt;
+        color: $primary-font-color;
+    }
+
+    .orgs__subheader {
+        font-size: 26px;
+        font-family: $font-alt;
+        color: $primary-font-color;
+        margin-bottom: 30px;
+    }
+
+    .orgs__desc {
+        font-size: 18px;
+        font-family: $font-alt;
+        color: $primary-font-color;
+        align-self: flex-end;
+        margin-bottom: 30px;
+    }
 }
 
-.orgs__btn {
-    width: 150px;
-    height: 50px;
-    text-decoration: none;
-    color: black;
-    padding: 10px 10px;
-    margin: 10px 20px;
-    border: 1px solid black;
-    background: none;
-}
-
-.orgs__text {
-    display: flex;
-    justify-content: center;
-}
-
-.orgs__text--par {
-    width: 300px;
-}
-
-.orgs__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.orgs__item {
-    height: 100px;
-    width: 600px;
-    border-bottom: 1px solid grey;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.orgs__headers {
-    text-align: left;
-}

@@ -49,8 +49,8 @@ const SimpleSteps = (props) => {
     return (
         <>
         <div className="steps__header">
-            <h3 clasName="header__text">Wystarczą 4 proste kroki</h3>
-            <img src={require('../../assets/Decoration.svg')} />
+            <h3 className="header__text">Wystarczą 4 proste kroki</h3>
+            <img src={require('../../assets/Decoration.svg')} className="decoration" />
         </div>
         <div className={props.className}>
             <div className="container">
