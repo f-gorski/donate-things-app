@@ -42,24 +42,37 @@ const RegisterForm = () => {
             email === '';
 
     return (
+
         <>
-             <h1>Formularz rejestracji</h1>
-             <form onSubmit={handleSubmit}>
-                <label>
-                    Email
-                    <input name="email" onChange={handleChange} value={userForm.email} type="text" placeholder="Email" />
-                </label>
-                <label>
-                    Hasło
-                    <input name="passwordOne" onChange={handleChange} value={userForm.passwordOne} type="password" placeholder="Hasło" />
-                </label>
-                <label>
-                    Hasło
-                    <input name="passwordTwo" onChange={handleChange} value={userForm.passwordTwo} type="password" placeholder="Powtórz hasło" />
-                </label>
-                <button disabled={isInvalid} type="submit">Zarejestruj się</button>
-                {error && <p>{userForm.error.message}</p>}
-             </form>
+            <div className="container">
+                <div className="register">
+                    <h1 className="register-form__header">Załóż konto</h1>
+                    <img src={require('../../assets/Decoration.svg')} className="decoration" />
+                    <form onSubmit={handleSubmit} className="register-form">
+                        <div className="register-box">
+                            <div>
+                                <label for="email" className="register-form__label">Email</label>
+                                <input className="register-form__input register-form__input--focused" name="email" onChange={handleChange} value={userForm.email} type="email" placeholder="Email" autocomplete="off" />
+                            </div>
+                            <div>
+                                <label for="passwordOne" className="register-form__label">Hasło</label>
+                                <input className="register-form__input register-form__input--focused" name="passwordOne" onChange={handleChange} value={userForm.passwordOne} type="password" placeholder="Hasło" autocomplete="off" />
+                            </div>
+                            <div>
+                                <label for="passwordTwo" className="register-form__label">Powtórz hasło</label>
+                                <input className="register-form__input register-form__input--focused" name="passwordTwo" onChange={handleChange} value={userForm.passwordTwo} type="password" placeholder="Hasło" autocomplete="off" />
+                            </div>
+                        </div>
+
+                    <div className="btn-wrapper">
+                        <Link to='/logowanie' className="register-form__login-link">Zaloguj się</Link>
+                        <button className="register-form__btn" disabled={isInvalid} type="submit">Załóż konto</button>
+                    </div>
+
+                    {error && <p>{userForm.error.message}</p>}
+                    </form>
+                </div>
+            </div>
         </>
     )
 }

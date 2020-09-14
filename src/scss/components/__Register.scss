@@ -1,25 +1,25 @@
-.login {
+.register {
     margin: 50px auto;
     text-align: center;
     font-family: $font-base;
     color: $primary-font-color;
 
-    .login__header {
+    .register__header {
         font-size: 38px;
         font-weight: normal;
     }
 
-    .login-box {
+    .register-box {
         width: 385px;
         background-color: #F0F1F1;
     }
     
-    .login-form {
+    .register-form {
         display: flex;
         flex-direction: column;
         justify-content: center;
 
-        .login-form__label {
+        .register-form__label {
             display: block;
             margin: 0 auto;
             width: 250px;
@@ -32,7 +32,7 @@
             font-size: 16px;
         }
 
-        .login-form__input {
+        .register-form__input {
             display: block;
             margin: 0 auto;
             width: 250px;
@@ -43,11 +43,11 @@
             font-size: 16px;
         }
 
-        .login-form__input:last-of-type {
+        .register-form__input:last-of-type {
             margin-bottom: 30px;
         }
 
-        .login-form__input--focused:focus {
+        .register-form__input--focused:focus {
             outline: 0;
             border-bottom: 2px solid $primary-font-color; 
         }
@@ -56,28 +56,26 @@
             display: flex;
             justify-content: space-between;
             margin-top: 40px;
-            .login-form__btn {
+            .register-form__btn {
                 width: 115px;
                 height: 50px;
                 font-size: 18px;
                 font-family: $font-base;
                 color: black;
                 text-decoration: none;
-                padding: 10px 10px;
                 border: 1px solid $primary-font-color;
                 background: none;
                 cursor: pointer;
                 outline: none;
             }
 
-            .login-form__register-link {
+            .register-form__login-link {
                 display: block;
                 font-size: 18px;
                 line-height: 50px;
                 color: black;
                 text-decoration: none;
             }
-        }
-        
+        } 
     }
 }

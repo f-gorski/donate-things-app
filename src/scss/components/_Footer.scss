@@ -36,10 +36,6 @@
                 margin-bottom: 40px;
             }
 
-            .textarea {
-                text-align: left;
-            }
-
             .contact-form__input {
                 width: 250px;
                 font-size: 18px;
@@ -71,19 +67,16 @@
                 }
             }
 
-            
-
             div:first-of-type {
                 display: flex;
             }
 
             .contact-form__message {
-
-            }
-           
-            .textarea {
-                input {
-                    width: 100%;
+                text-align: left;
+                .textarea {
+                    input {
+                        width: 100%;
+                    }
                 }
             }
         }
