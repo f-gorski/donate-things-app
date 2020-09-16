@@ -51,15 +51,15 @@ const RegisterForm = () => {
                     <form onSubmit={handleSubmit} className="register-form">
                         <div className="register-box">
                             <div>
-                                <label for="email" className="register-form__label">Email</label>
+                                <label className="register-form__label">Email</label>
                                 <input className="register-form__input register-form__input--focused" name="email" onChange={handleChange} value={userForm.email} type="email" placeholder="Email" autocomplete="off" />
                             </div>
                             <div>
-                                <label for="passwordOne" className="register-form__label">Hasło</label>
+                                <label className="register-form__label">Hasło</label>
                                 <input className="register-form__input register-form__input--focused" name="passwordOne" onChange={handleChange} value={userForm.passwordOne} type="password" placeholder="Hasło" autocomplete="off" />
                             </div>
                             <div>
-                                <label for="passwordTwo" className="register-form__label">Powtórz hasło</label>
+                                <label className="register-form__label">Powtórz hasło</label>
                                 <input className="register-form__input register-form__input--focused" name="passwordTwo" onChange={handleChange} value={userForm.passwordTwo} type="password" placeholder="Hasło" autocomplete="off" />
                             </div>
                         </div>

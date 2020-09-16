@@ -15,38 +15,71 @@ const SummaryPage = () => {
 
     return (
         <>
-        <h3>Podsumowanie Twojej darowizny</h3>
-        <div>
-            <h5>Oddajesz:</h5>
-            <ul>
-                <li>{page2.quantity} worków, {page1.itemType}</li>
-                <li>W lokalizacji {page3.localization}</li>
-            </ul>
-        </div>
+            <h3 className="donate-form__header">Podsumowanie Twojej darowizny</h3>
+            <div className="donate-form__typeDetails">
+                <h4 className="donate-form__subheader">Oddajesz:</h4>
+                <ul>
+                    <li className="donate-form__list-item">
+                        <p className="list-item__paragraph">{page2.quantity} worków, {page1.itemType}</p>
+                    </li>
 
-        <div>
-            <h5>Adres odbioru:</h5>
-            <ul>
-                <li>Ulica {page4.street}</li>
-                <li>Miasto {page4.city}</li>
-                <li>Kod pocztowy {page4.code}</li>
-                <li>Numer {page4.number}</li>
-            </ul>
-        </div>
+                    <li className="donate-form__list-item">
+                        <p className="list-item__paragraph">W lokalizacji {page3.localization}</p>
+                    </li>
+                </ul>
+            </div>
 
-        <div>
-            <h5>Termin odbioru:</h5>
-            <ul>
-                <li>Data {page4.date}</li>
-                <li>Godzina {page4.hour}</li>
-                <li>Uwagi dla kuriera {page4.comments}</li>
-            </ul>
-        </div>
+            <div className="donate-form__deliveryDetails">
+                <div className="donate-form__address">
+                    <h4 className="donate-form__subheader">Adres odbioru:</h4>
+                    <ul className="donate-form__list">
+                        <li className="donate-form__list-item">
+                            <p className="list-item__paragraph">Ulica</p>
+                            <p className="list-item__paragraph">{page4.street}</p>
+                        </li>
 
-        <div>
-        <button type="button" onClick={handlePrev}>Wstecz</button>
-        <button type="button" onClick={handleAccept}>Potwierdzam</button>
-        </div>
+                        <li className="donate-form__list-item">
+                            <p className="list-item__paragraph">Miasto</p>
+                            <p className="list-item__paragraph">{page4.city}</p>
+                        </li>
+
+                        <li className="donate-form__list-item">
+                            <p className="list-item__paragraph">Kod pocztowy</p>
+                            <p className="list-item__paragraph">{page4.code}</p>
+                        </li>
+
+                        <li className="donate-form__list-item">
+                            <p className="list-item__paragraph">Numer</p>
+                            <p className="list-item__paragraph">{page4.number}</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div className="donate-form__date">
+                    <h4 className="donate-form__subheader">Termin odbioru:</h4>
+                    <ul>
+                        <li className="donate-form__list-item">
+                            <p className="list-item__paragraph">Data</p>
+                            <p className="list-item__paragraph">{page4.date}</p>
+                        </li>
+
+                        <li className="donate-form__list-item">
+                            <p className="list-item__paragraph">Godzina</p>
+                            <p className="list-item__paragraph">{page4.hour}</p>
+                        </li>
+
+                        <li className="donate-form__list-item">
+                            <p className="list-item__paragraph">Uwagi dla kuriera</p>
+                            <p className="list-item__paragraph">{page4.comments}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <button className="donate-form__btn" type="button" onClick={handlePrev}>Wstecz</button>
+                <button className="donate-form__btn" type="button" onClick={handleAccept}>Potwierdzam</button>
+            </div>
         </>
     )
 }
