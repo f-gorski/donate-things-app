@@ -1,0 +1,90 @@
+.section__donate {
+    display: flex;
+    width: 100%;
+
+    .img-wrapper {
+        background-image: url('../../assets/Header-Form-Background.png');
+        height: 1000px;
+        width: 50%;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+    
+    .donate {
+        align-self: center;
+        text-align: center;
+        margin: 210px auto;
+        margin-left: auto;
+        margin-right: 40px;
+        margin-bottom: 240px;
+        height: 455px;
+    }
+
+    .donate__header {
+        font-size: 38px;
+        color: $primary-font-color;
+        font-weight: normal;
+        letter-spacing: -0.76px;
+        line-height: 55px;
+    }
+
+    .donate__subheader {
+        font-size: 40px;
+        color: $primary-font-color;
+        font-weight: normal;
+        letter-spacing: -0.76px;
+        line-height: 55px;
+    }
+
+    .donate__steps {
+        display: flex;
+        margin-top: 55px;
+    }
+
+    .donate__steps-item:before {
+        content: "";
+        display: block;
+        transform: rotate(45deg);
+        width: 190px;
+        height: 190px;
+        border: 1px solid $primary-font-color;
+    }
+
+    .donate__steps-item {
+            width: 190px;
+            height: 190px;
+            position: relative;
+
+        .donate__steps-header {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            text-align: center;
+            transform: translateX(-50%);
+            font-size: 32px;
+            color: $primary-font-color;
+            font-family: $font-base;
+        }
+
+        .donate__steps-text {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          text-align: center;
+          transform: translateX(-50%);
+          font-size: 22px;
+          color: $primary-font-color;
+          font-family: $font-base;
+        }
+    }
+
+    .decoration {
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+}
