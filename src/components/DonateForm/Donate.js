@@ -88,11 +88,9 @@ const DonateForm = () => {
                 </div>
             </section>
             <section className="section section__donate-form">
-                <div className="container">
                 <FormContext.Provider value={{ formState, setFormState, page, setPage }} >
                         {pageToRender(page)}
                 </FormContext.Provider>
-                </div>
             </section>
             
             <Footer />

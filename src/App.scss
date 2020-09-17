@@ -1,17 +1,24 @@
+//---General--
 @import './scss/reset';
 @import './scss/settings/fonts';
 @import './scss/settings/colors';
 @import './scss/base';
+
+//---Navigation components---
 @import './scss/components/Navigation';
+
+//---Home components---
 @import './scss/components/Start';
 @import './scss/components/Description';
 @import './scss/components/SimpleSteps';
 @import './scss/components/About';
 @import './scss/components/Organisations';
-@import './scss/components/Footer.scss';
-@import './scss/components/_Login';
-@import './scss/components/_Register';
-@import './scss/components/_Donate.scss';
+@import './scss/components/Footer';
 
-@import 'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap';
-@import 'https://fonts.googleapis.com/css?family=Merriweather';
+//Authentification components
+@import './scss/components/Login';
+@import './scss/components/Register';
+
+//DonateForm components
+@import './scss/components/Donate';
+@import './scss/components/TypePage';

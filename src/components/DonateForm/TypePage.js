@@ -22,36 +22,42 @@ const TypePage = () => {
         <>
             <div className="donate-form__stepOne">
                 <div className="donate-form__important">
-                    <h3 className="donate-form__important-header">Ważne</h3>
-                    <p className="donate-form__important-text">Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
+                    <div className="container">
+                        <h3 className="donate-form__important-header">Ważne</h3>
+                        <p className="donate-form__important-text">Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
+                    </div>
                 </div>
-                <h3 className="donate-form__step-count">Krok 1/4</h3>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <h1 className="donate-form__header">Zaznacz co chcesz oddać:</h1>
-                    <div>
-                        <label>ubrania, które nadają się do ponownego użycia</label>
-                        <input type="radio" name="itemType" ref={register} value="ubrania dobre" />
-                    </div>
-                    <div>
-                        <label>ubrania do wyrzucenia</label>
-                        <input type="radio" name="itemType" ref={register} value="ubrania do wyrzucenia" />
-                    </div>
-                    <div>
-                        <label>zabawki</label>
-                        <input type="radio" name="itemType" ref={register} value="zabawki" />
-                    </div>
-                    <div>
-                        <label>książki</label>
-                        <input type="radio" name="itemType" ref={register} value="książki" />
-                    </div>
+                <div className="donate-form__form-wrapper">
+                    <div className="container">
+                        <h3 className="donate-form__step-count">Krok 1/4</h3>
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <h1 className="donate-form__header">Zaznacz co chcesz oddać:</h1>
+                            <div className="donate-form__item">
+                                <input className="donate-form__input" type="radio" name="itemType" ref={register} value="ubrania dobre" id="clothesBad" />
+                                <label className="donate-form__label" for="clothesGood">ubrania, które nadają się do ponownego użycia</label>
+                            </div>
+                            <div className="donate-form__item">
+                                <input className="donate-form__input" type="radio" name="itemType" ref={register} value="ubrania do wyrzucenia" id="clothesBad" />
+                                <label className="donate-form__label" for="clothesBad">ubrania do wyrzucenia</label>
+                            </div>
+                            <div className="donate-form__item">
+                                <input className="donate-form__input" type="radio" name="itemType" ref={register} value="zabawki" id="toys" />
+                                <label className="donate-form__label" for="toys">zabawki</label>
+                            </div>
+                            <div className="donate-form__item">
+                                <input className="donate-form__input" type="radio" name="itemType" ref={register} value="książki" id="books" />
+                                <label className="donate-form__label" for="books">książki</label>
+                            </div>
 
-                    <div>
-                        <label>inne</label>
-                        <input type="radio" name="itemType" ref={register} value="inne" />
-                    </div>
+                            <div className="donate-form__item">
+                                <input className="donate-form__input" type="radio" name="itemType" ref={register} value="inne" id="other" />
+                                <label className="donate-form__label" for="other">inne</label>
+                            </div>
 
-                    <button type="submit">Dalej</button>
-                </form>
+                            <button className="donate-form__btn" type="submit">Dalej</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </>
     )
