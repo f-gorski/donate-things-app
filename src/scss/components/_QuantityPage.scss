@@ -1,0 +1,84 @@
+.donate-form__stepTwo {
+    width: 100%;
+    
+    .donate-form__important {
+        height: 180px;
+        width: 100%;
+        background-color: $golden-decoration;
+
+        .container {
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+
+            .donate-form__important-header {
+                color: black;
+                font-size: 36px;
+            }
+
+            .donate-form__important-text {
+                color: $primary-font-color;
+                font-size: 22px;
+            }
+
+            .donate-form__link {
+                text-decoration: none;
+                color: $primary-font-color;
+            }
+        }
+    }
+
+    .donate-form__form-wrapper {
+        background-image: url('../../assets/Background-Form.png');
+        background-size: cover;
+        background-position: right;
+
+        .container {
+            flex-direction: column;
+        }
+
+        .donate-form__step-count {
+            margin-top: 35px;
+            color: $primary-font-color;
+            font-size: 24px;
+        }
+
+        .donate-form__header {
+            margin-top: 70px;
+            margin-bottom: 45px;
+            font-size: 36px;
+        }
+
+        .donate-form__item {
+            margin-top: 50px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .donate-form__input {
+            margin-left: 26px;
+            width: 300px;
+            height: 50px;
+            border: 0.75px solid $primary-font-color;
+            background: none;
+            padding-left: 18px;
+            font-size: 24px;
+            color: black;
+        }
+
+        .donate-form__label {
+            font-size: 24px;
+            color: black;
+        }
+
+        .donate-form__btn {
+            margin: 475px 50px 50px 0;
+            width: 180px;
+            height: 80px;
+            font-size: 24px;
+            border: 0.75px solid $primary-font-color;
+        }
+
+    }
+}

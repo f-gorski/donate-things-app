@@ -21,32 +21,38 @@ const QuantityPage = () => {
     const handlePrev = () => setPage((currPage) => currPage - 1);
 
     return (
-        <>
-            <div className="donate-form__stepTwo">
-                <div className="donate-form__important">
+        <div className="donate-form__stepTwo">
+            <div className="donate-form__important">
+                <div className="container">
                     <h3 className="donate-form__important-header">Ważne</h3>
-                    <p className="donate-form__important-text">Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak poprawnie spakować rzeczy znajdziesz <Link to="#">TUTAJ</Link>.</p>
+                    <p className="donate-form__important-text">Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak poprawnie spakować rzeczy znajdziesz <Link to="#" className="donate-form__link">TUTAJ</Link>.</p>
                 </div>
-                <h3 className="donate-form__step-count">Krok 2/4</h3>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <h1 className="donate-form__header">Podaj liczbę worków 60l, w które spakowałeś/aś rzeczy:</h1>
-                    <label>
-                        Liczba 60l worków:
-                    <select ref={register({ required: "Pole wymagane" })} name="quantity">
-                            <option value="0">--wybierz--</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        <ErrorMessage errors={errors} name="quantity" />
-                    </label>
-                    <input type="button" onClick={handlePrev} value="Wstecz" />
-                    <input type="submit" value="Dalej" />
-                </form>
             </div>
-        </>
+
+            <div className="donate-form__form-wrapper">
+                <div className="container">
+                    <h3 className="donate-form__step-count">Krok 2/4</h3>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <h1 className="donate-form__header">Podaj liczbę worków 60l, w które spakowałeś/aś rzeczy:</h1>
+                        <div className="donate-form__item">
+                            <label className="donate-form__label" for="quantity">Liczba 60l worków:</label>
+                            <select className="donate-form__input" ref={register({ required: "Pole wymagane" })} name="quantity" id="quantity">
+                                <option value="0" disabled>— wybierz —</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <ErrorMessage errors={errors} name="quantity" />
+
+                        <button type="button" className="donate-form__btn" onClick={handlePrev}>Wstecz</button>
+                        <button type="submit" className="donate-form__btn">Dalej</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     )
 }
 
