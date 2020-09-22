@@ -1,0 +1,111 @@
+.donate-form__stepThree {
+    width: 100%;
+    
+    .donate-form__important {
+        height: 180px;
+        width: 100%;
+        background-color: $golden-decoration;
+
+        .container {
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+
+            .donate-form__important-header {
+                color: black;
+                font-size: 36px;
+            }
+
+            .donate-form__important-text {
+                color: $primary-font-color;
+                font-size: 22px;
+            }
+        }
+    }
+
+    .donate-form__form-wrapper {
+        background-image: url('../../assets/Background-Form.png');
+        background-size: cover;
+        background-position: right;
+
+        .container {
+            flex-direction: column;
+        }
+
+        .donate-form__step-count {
+            margin-top: 35px;
+            color: $primary-font-color;
+            font-size: 24px;
+        }
+
+        .donate-form__header {
+            margin-top: 70px;
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        .donate-form__subheader {
+            margin-top: 50px;
+            font-size: 24px;
+        }
+
+        .donate-form__item {
+            margin-top: 50px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .donate-form__row {
+            display: flex;
+        }
+
+        .donate-form__input--select {
+            width: 300px;
+            height: 50px;
+            border: 0.75px solid $primary-font-color;
+            background: none;
+            padding-left: 18px;
+            font-size: 24px;
+            color: black;
+        }
+
+        .donate-form__input--checkbox {
+            // width: 40px;
+            // height: 40px;
+            // border: 0.75px solid $primary-font-color;
+            // -webkit-appearance: none;
+            // -moz-appearance: none;
+            display: none;
+        }
+
+        .donate-form__input--checkbox:checked + label {
+            background-color: $golden-decoration;
+        }
+
+        .donate-form__input--text {
+            margin-top: 20px;
+            width: 570px;
+            height: 40px;
+            border: 0.75px solid $primary-font-color;
+            background: none;
+        }
+
+        .donate-form__label {
+            margin-right: 24px;
+            padding: 11px 26px;
+            font-size: 24px;
+            color: black;
+            border: 0.75px solid $primary-font-color;
+        }
+
+        .donate-form__btn {
+            margin: 120px 50px 50px 0;
+            width: 180px;
+            height: 80px;
+            font-size: 24px;
+            border: 0.75px solid $primary-font-color;
+        }
+
+    }
+}

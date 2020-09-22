@@ -34,64 +34,81 @@ const AddressPage = () => {
     const handlePrev = () => setPage((currPage) => currPage - 1);
 
     return (
+
         <div className="donate-form__stepFour">
             <div className="donate-form__important">
-                <h3 className="donate-form__important-header">Ważne</h3>
-                <p className="donate-form__important-text">Podaj adres oraz termin odbioru rzeczy.</p>
+                <div className="container">
+                    <h3 className="donate-form__important-header">Ważne!</h3>
+                    <p className="donate-form__important-text">Podaj adres oraz termin odbioru rzeczy.</p>
+                </div>
             </div>
-            <h3 className="donate-form__step-count">Krok 4/4</h3>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="donate-form__box">
-                    <h3 className="donate-form__header">Podaj adres oraz termin odbioru przez kuriera</h3>
-                    <h4 className="donate-form__subheader">Lokalizacja</h4>
-                    <ul>
-                        <li>
-                            <label>Ulica</label>
-                            <input name="street" ref={register({ required: "Pole wymagane" })} />
-                            <ErrorMessage errors={errors} name="street" as="p" />
-                        </li>
-                        <li>
-                            <label>Miasto</label>
-                            <input ref={register({ required: "Pole wymagane" })} name="city" />
-                            <ErrorMessage errors={errors} name="city" as="p" />
-                        </li>
-                        <li>
-                            <label>Kod pocztowy</label>
-                            <input ref={register({ required: "Pole wymagane" })} name="code" />
-                            <ErrorMessage errors={errors} name="code" as="p" />
-                        </li>
-                        <li>
-                            <label>Numer</label>
-                            <input ref={register({ required: "Pole wymagane" })} name="number" />
-                            <ErrorMessage errors={errors} name="number" as="p" />
-                        </li>
-                    </ul>
-                </div>
-                <div className="donate-form__box">
-                    <h4 className="donate-form__subheader">Termin odbioru</h4>
 
-                    <ul>
-                        <li>
-                            <label className="donate-form__label">Data</label>
-                            <input className="donate-form__input" ref={register({ required: "Pole wymagane" })} name="date" />
-                            <ErrorMessage errors={errors} name="date" as="p" />
-                        </li>
-                        <li>
-                            <label className="donate-form__label">Godzina</label>
-                            <input className="donate-form__input" ref={register({ required: "Pole wymagane" })} name="hour" />
-                            <ErrorMessage errors={errors} name="hour" as="p" />
-                        </li>
-                        <li>
-                            <label className="donate-form__label">Uwagi dla kuriera</label>
-                            <input className="donate-form__input" ref={register({ required: "Pole wymagane" })} type="textarea" name="comments" />
-                            <ErrorMessage errors={errors} name="comments" as="p" />
-                        </li>
-                    </ul>
+            <div className="donate-form__form-wrapper">
+                <div className="container">
+                    <h3 className="donate-form__step-count">Krok 4/4</h3>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <h1 className="donate-form__header">Podaj adres oraz termin odbioru przez kuriera:</h1>
+
+                        <div className="donate-form__row">
+                            <div className="donate-form__group">
+                                <h3 className="donate-form__subheader">Adres odbioru:</h3>
+                                <div className="donate-form__item">
+                                    <label className="donate-form__label" for="street">Ulica</label>
+                                    <input className="donate-form__input" name="street" id="street" ref={register({ required: "Pole wymagane" })} />
+                                    <ErrorMessage errors={errors} name="street" as="p" />
+                                </div>
+
+                                <div className="donate-form__item">
+                                    <label className="donate-form__label" for="city">Miasto</label>
+                                    <input className="donate-form__input" name="city" id="city" ref={register({ required: "Pole wymagane" })} />
+                                    <ErrorMessage errors={errors} name="city" as="p" />
+                                </div>
+
+                                <div className="donate-form__item">
+                                    <label className="donate-form__label" for="code">Kod pocztowy</label>
+                                    <input className="donate-form__input" name="code" id="code" ref={register({ required: "Pole wymagane" })} />
+                                    <ErrorMessage errors={errors} name="code" as="p" />
+                                </div>
+
+                                <div className="donate-form__item">
+                                    <label className="donate-form__label" for="number">Numer</label>
+                                    <input className="donate-form__input" name="number" id="number" ref={register({ required: "Pole wymagane" })} />
+                                    <ErrorMessage errors={errors} name="number" as="p" />
+                                </div>
+
+                            </div>
+
+                            <div className="donate-form__group">
+                                <h3 className="donate-form__subheader">Termin odbioru:</h3>
+                                <div className="donate-form__item">
+                                    <label className="donate-form__label" for="date">Data</label>
+                                    <input className="donate-form__input" name="date" id="date" ref={register({ required: "Pole wymagane" })} />
+                                    <ErrorMessage errors={errors} name="date" as="p" />
+                                </div>
+
+                                <div className="donate-form__item">
+                                    <label className="donate-form__label" for="hour">Godzina</label>
+                                    <input className="donate-form__input" name="hour" id="hour" ref={register({ required: "Pole wymagane" })} />
+                                    <ErrorMessage errors={errors} name="hour" as="p" />
+                                </div>
+
+                                <div className="donate-form__item">
+                                    <label className="donate-form__label" for="comments">Uwagi dla kuriera</label>
+                                    <input className="donate-form__input" name="comments" id="code" ref={register({ required: "Pole wymagane" })} />
+                                    <ErrorMessage errors={errors} name="comments" as="p" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <button className="donate-form__btn" type="button" onClick={handlePrev}>Wstecz</button>
+                        <button className="donate-form__btn" type="submit">Dalej</button>
+
+                    </form>
                 </div>
-                <button className="donate-form__btn" type="button" onClick={handlePrev}>Wstecz</button>
-                <button className="donate-form__btn" type="submit">Dalej</button>
-            </form>
+            </div >
         </div>
+
+
     )
 }
 
