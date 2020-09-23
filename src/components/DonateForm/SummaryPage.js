@@ -10,7 +10,7 @@ const SummaryPage = () => {
     const handlePrev = () => setPage((currPage) => currPage - 1);
 
     const handleAccept = () => {
-        alert("Formularz wysłany, dziekujemy!");
+        setPage((currPage) => currPage + 1)
     }
 
     return (

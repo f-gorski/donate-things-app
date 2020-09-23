@@ -7,6 +7,7 @@ import QuantityPage from './QuantityPage';
 import LocationPage from './LocationPage';
 import AddressPage from './AddressPage';
 import SummaryPage from './SummaryPage';
+import SubmitPage from './SubmitPage';
 import Footer from '../Home/Footer';
 
 const Donate = () => {
@@ -52,6 +53,9 @@ const DonateForm = () => {
                 return <AddressPage />
             case 5:
                 return <SummaryPage />
+            case 6:
+                return <SubmitPage />
+
             default:
                 return null;
         }
