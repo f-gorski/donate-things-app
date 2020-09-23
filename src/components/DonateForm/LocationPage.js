@@ -52,18 +52,18 @@ const LocationPage = () => {
                             <div className="donate-form__row">
                                 <div className="donate-form__item">
                                     <input className="donate-form__input--checkbox" name="children" id="children" type="checkbox" ref={register} />
-                                    <label className="donate-form__label" for="children">dzieciom</label>
+                                    <label className="donate-form__label" htmlFor="children">dzieciom</label>
                                 </div>
 
                                 <div className="donate-form__item">
                                     <input className="donate-form__input--checkbox" name="mothers" id="mothers" type="checkbox" ref={register} />
-                                    <label className="donate-form__label" for="mothers">samotnym matkom</label>
+                                    <label className="donate-form__label" htmlFor="mothers">samotnym matkom</label>
                                 </div>
 
                                 <div className="donate-form__item">
                                     <input className="donate-form__input--checkbox" name="homeless" id="homeless" type="checkbox" ref={register} />
                                     <label className="donate-form__label"
-                                        for="homeless">bezdomnym</label>
+                                        htmlFor="homeless">bezdomnym</label>
                                 </div>
 
                             </div>
@@ -71,12 +71,12 @@ const LocationPage = () => {
                             <div className="donate-form__row">
                                 <div className="donate-form__item">
                                     <input className="donate-form__input--checkbox" name="disabled" id="disabled" type="checkbox" ref={register} />
-                                    <label className="donate-form__label" for="disabled">niepełnosprawnym</label>
+                                    <label className="donate-form__label" htmlFor="disabled">niepełnosprawnym</label>
                                 </div>
 
                                 <div className="donate-form__item">
                                     <input className="donate-form__input--checkbox" name="elder" id="elder" type="checkbox" ref={register} />
-                                    <label className="donate-form__label" for="elder">osobom starszym</label>
+                                    <label className="donate-form__label" htmlFor="elder">osobom starszym</label>
                                 </div>
                             </div>
                         </div>

@@ -45,12 +45,12 @@ const LogInForm = () => {
                 <form onSubmit={handleSubmit} className="login-form">
                     <div className="login-box">
                         <div>
-                            <label for="email" className="login-form__label">Email</label>
-                            <input className="login-form__input login-form__input--focused" name="email" onChange={handleChange} value={userForm.email} type="text" placeholder="Email" autocomplete="off" />
+                            <label className="login-form__label" htmlFor="email">Email</label>
+                            <input className="login-form__input login-form__input--focused" name="email" id="email" onChange={handleChange} value={userForm.email} type="text" placeholder="Email" autocomplete="off" />
                         </div>
                         <div>
-                            <label for="passwordOne" className="login-form__label">Hasło</label>
-                            <input className="login-form__input login-form__input--focused" name="passwordOne" onChange={handleChange} value={userForm.passwordOne} type="password" placeholder="Hasło" autocomplete="off" />
+                            <label className="login-form__label" htmlFor="passwordOne">Hasło</label>
+                            <input className="login-form__input login-form__input--focused" name="passwordOne" id="passwordOne" onChange={handleChange} value={userForm.passwordOne} type="password" placeholder="Hasło" autocomplete="off" />
                         </div>
                     </div>
 

@@ -35,7 +35,7 @@ const QuantityPage = () => {
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <h1 className="donate-form__header">Podaj liczbę worków 60l, w które spakowałeś/aś rzeczy:</h1>
                         <div className="donate-form__item">
-                            <label className="donate-form__label" for="quantity">Liczba 60l worków:</label>
+                            <label className="donate-form__label" htmlFor="quantity">Liczba 60l worków:</label>
                             <select className="donate-form__input" ref={register({ required: "Pole wymagane" })} name="quantity" id="quantity">
                                 <option value="0" disabled>— wybierz —</option>
                                 <option value="1">1</option>

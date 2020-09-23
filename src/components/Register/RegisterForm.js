@@ -51,16 +51,16 @@ const RegisterForm = () => {
                     <form onSubmit={handleSubmit} className="register-form">
                         <div className="register-box">
                             <div>
-                                <label className="register-form__label">Email</label>
-                                <input className="register-form__input register-form__input--focused" name="email" onChange={handleChange} value={userForm.email} type="email" placeholder="Email" autocomplete="off" />
+                                <label className="register-form__label" htmlFor="email">Email</label>
+                                <input className="register-form__input register-form__input--focused" name="email" id="email" onChange={handleChange} value={userForm.email} type="email" placeholder="Email" autocomplete="off" />
                             </div>
                             <div>
-                                <label className="register-form__label">Hasło</label>
-                                <input className="register-form__input register-form__input--focused" name="passwordOne" onChange={handleChange} value={userForm.passwordOne} type="password" placeholder="Hasło" autocomplete="off" />
+                                <label className="register-form__label" htmlFor="passwordOne">Hasło</label>
+                                <input className="register-form__input register-form__input--focused" name="passwordOne" id="passwordOne" onChange={handleChange} value={userForm.passwordOne} type="password" placeholder="Hasło" autocomplete="off" />
                             </div>
                             <div>
-                                <label className="register-form__label">Powtórz hasło</label>
-                                <input className="register-form__input register-form__input--focused" name="passwordTwo" onChange={handleChange} value={userForm.passwordTwo} type="password" placeholder="Hasło" autocomplete="off" />
+                                <label className="register-form__label" htmlFor="passwordTwo">Powtórz hasło</label>
+                                <input className="register-form__input register-form__input--focused" name="passwordTwo" id="passwordTwo" onChange={handleChange} value={userForm.passwordTwo} type="password" placeholder="Hasło" autocomplete="off" />
                             </div>
                         </div>
 
