@@ -13,6 +13,12 @@
         width: 385px;
         background-color: #F0F1F1;
     }
+
+    .register__error-msg {
+        margin-bottom: 10px;
+        color: $error-color;
+        font-size: 16px;
+    }
     
     .register-form {
         display: flex;
