@@ -36,14 +36,16 @@ const LocationPage = () => {
                         <h1 className="donate-form__header">Lokalizacja:</h1>
                         <div className="donate-form__group">
                             <div className="donate-form__item">
-                                <select className="donate-form__input--select" ref={register({ required: "Pole wymagane" })} name="localization" id="localization" >
+                                <select className="donate-form__input--select" ref={register({ required: "Wybierz lokalizację" })} name="localization" id="localization" >
                                     <option value="" disabled>— wybierz —</option>
                                     <option value="Poznań">Poznań</option>
                                     <option value="Warszawa">Warszawa</option>
                                     <option value="Kraków">Kraków</option>
                                 </select>
-                                <ErrorMessage errors={errors} name="localization" as="p" />
                             </div>
+
+                            {errors.localization && <p className="donate-form__error-msg">{errors.localization.message}</p>}
+                            
                         </div>
 
                         <div className="donate-form__group">
@@ -51,17 +53,17 @@ const LocationPage = () => {
 
                             <div className="donate-form__row">
                                 <div className="donate-form__item">
-                                    <input className="donate-form__input--checkbox" name="children" id="children" type="checkbox" ref={register} />
+                                    <input className="donate-form__input--checkbox" name="toWhom" id="children" type="checkbox" ref={register({required: "Wybierz opcje"})} />
                                     <label className="donate-form__label" htmlFor="children">dzieciom</label>
                                 </div>
 
                                 <div className="donate-form__item">
-                                    <input className="donate-form__input--checkbox" name="mothers" id="mothers" type="checkbox" ref={register} />
+                                    <input className="donate-form__input--checkbox" name="toWhom" id="mothers" type="checkbox" ref={register({required: "Wybierz opcje"})} />
                                     <label className="donate-form__label" htmlFor="mothers">samotnym matkom</label>
                                 </div>
 
                                 <div className="donate-form__item">
-                                    <input className="donate-form__input--checkbox" name="homeless" id="homeless" type="checkbox" ref={register} />
+                                    <input className="donate-form__input--checkbox" name="toWhom" id="homeless" type="checkbox" ref={register({required: "Wybierz opcje"})} />
                                     <label className="donate-form__label"
                                         htmlFor="homeless">bezdomnym</label>
                                 </div>
@@ -70,16 +72,18 @@ const LocationPage = () => {
 
                             <div className="donate-form__row">
                                 <div className="donate-form__item">
-                                    <input className="donate-form__input--checkbox" name="disabled" id="disabled" type="checkbox" ref={register} />
+                                    <input className="donate-form__input--checkbox" name="toWhom" id="disabled" type="checkbox" ref={register({required: "Wybierz opcje"})} />
                                     <label className="donate-form__label" htmlFor="disabled">niepełnosprawnym</label>
                                 </div>
 
                                 <div className="donate-form__item">
-                                    <input className="donate-form__input--checkbox" name="elder" id="elder" type="checkbox" ref={register} />
+                                    <input className="donate-form__input--checkbox" name="toWhom" id="elder" type="checkbox" ref={register({required: "Wybierz opcje"})} />
                                     <label className="donate-form__label" htmlFor="elder">osobom starszym</label>
                                 </div>
                             </div>
                         </div>
+
+                        {errors.toWhom && <p className="donate-form__error-msg">{errors.toWhom.message}</p>}
 
                         <div className="donate-form__group">
                             <h3 className="donate-form__subheader">Wpisz nazwę konkretnej organizacji (opcjonalnie)</h3>

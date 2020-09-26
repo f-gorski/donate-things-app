@@ -33,26 +33,28 @@ const TypePage = () => {
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <h1 className="donate-form__header">Zaznacz co chcesz oddać:</h1>
                             <div className="donate-form__item">
-                                <input className="donate-form__input" type="radio" name="itemType" ref={register} value="ubrania dobre" id="clotheGood" />
+                                <input className="donate-form__input" type="radio" name="itemType" ref={register({required: "Zaznacz jedno z pól"})} value="ubrania dobre" id="clotheGood" />
                                 <label className="donate-form__label" htmlFor="clothesGood">ubrania, które nadają się do ponownego użycia</label>
                             </div>
                             <div className="donate-form__item">
-                                <input className="donate-form__input" type="radio" name="itemType" ref={register} value="ubrania do wyrzucenia" id="clothesBad" />
+                                <input className="donate-form__input" type="radio" name="itemType" ref={register({required: "Zaznacz jedno z pól"})} value="ubrania do wyrzucenia" id="clothesBad" />
                                 <label className="donate-form__label" htmlFor="clothesBad">ubrania do wyrzucenia</label>
                             </div>
                             <div className="donate-form__item">
-                                <input className="donate-form__input" type="radio" name="itemType" ref={register} value="zabawki" id="toys" />
+                                <input className="donate-form__input" type="radio" name="itemType" ref={register({required: "Zaznacz jedno z pól"})} value="zabawki" id="toys" />
                                 <label className="donate-form__label" htmlFor="toys">zabawki</label>
                             </div>
                             <div className="donate-form__item">
-                                <input className="donate-form__input" type="radio" name="itemType" ref={register} value="książki" id="books" />
+                                <input className="donate-form__input" type="radio" name="itemType" ref={register({required: "Zaznacz jedno z pól"})} value="książki" id="books" />
                                 <label className="donate-form__label" htmlFor="books">książki</label>
                             </div>
 
                             <div className="donate-form__item">
-                                <input className="donate-form__input" type="radio" name="itemType" ref={register} value="inne" id="other" />
+                                <input className="donate-form__input" type="radio" name="itemType" ref={register({required: "Zaznacz jedno z pól"})} value="inne" id="other" />
                                 <label className="donate-form__label" htmlFor="other">inne</label>
                             </div>
+
+                            {errors.itemType && <p className="donate-form__error-msg">{errors.itemType.message}</p>}
 
                             <button className="donate-form__btn" type="submit">Dalej</button>
                         </form>

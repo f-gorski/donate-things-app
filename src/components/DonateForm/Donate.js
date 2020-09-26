@@ -24,7 +24,7 @@ const DonateForm = () => {
 
     const [formState, setFormState] = useState({
         page1: {},
-        page2: { quantity: 0 },
+        page2: { quantity: "" },
         page3: {
             localization: "",
             localizationSpecifics: ""

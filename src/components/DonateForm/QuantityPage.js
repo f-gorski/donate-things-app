@@ -36,8 +36,8 @@ const QuantityPage = () => {
                         <h1 className="donate-form__header">Podaj liczbę worków 60l, w które spakowałeś/aś rzeczy:</h1>
                         <div className="donate-form__item">
                             <label className="donate-form__label" htmlFor="quantity">Liczba 60l worków:</label>
-                            <select className="donate-form__input" ref={register({ required: "Pole wymagane" })} name="quantity" id="quantity">
-                                <option value="0" disabled>— wybierz —</option>
+                            <select className="donate-form__input" ref={register({ required: "Wybierz liczbę" })} name="quantity" id="quantity">
+                                <option value="" disabled>— wybierz —</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -45,7 +45,8 @@ const QuantityPage = () => {
                                 <option value="5">5</option>
                             </select>
                         </div>
-                        <ErrorMessage errors={errors} name="quantity" />
+                        
+                        {errors.quantity && <p className="donate-form__error-msg">{errors.quantity.message}</p>}
 
                         <button type="button" className="donate-form__btn" onClick={handlePrev}>Wstecz</button>
                         <button type="submit" className="donate-form__btn">Dalej</button>

@@ -71,11 +71,6 @@
         }
 
         .donate-form__input--checkbox {
-            // width: 40px;
-            // height: 40px;
-            // border: 0.75px solid $primary-font-color;
-            // -webkit-appearance: none;
-            // -moz-appearance: none;
             display: none;
         }
 
@@ -97,6 +92,12 @@
             font-size: 24px;
             color: black;
             border: 0.75px solid $primary-font-color;
+        }
+
+        .donate-form__error-msg {
+            margin-top: 30px;
+            color: $error-color;
+            font-size: 24px;
         }
 
         .donate-form__btn {

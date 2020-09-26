@@ -55,26 +55,30 @@ const AddressPage = () => {
                                 <div className="donate-form__item">
                                     <label className="donate-form__label" htmlFor="street">Ulica</label>
                                     <input className="donate-form__input" name="street" id="street" ref={register({ required: "Pole wymagane" })} />
-                                    <ErrorMessage errors={errors} name="street" as="p" />
                                 </div>
+
+                                {errors.street && <p className="donate-form__error-msg">{errors.street.message}</p>}
 
                                 <div className="donate-form__item">
                                     <label className="donate-form__label" htmlFor="city">Miasto</label>
                                     <input className="donate-form__input" name="city" id="city" ref={register({ required: "Pole wymagane" })} />
-                                    <ErrorMessage errors={errors} name="city" as="p" />
                                 </div>
+
+                                {errors.city && <p className="donate-form__error-msg">{errors.city.message}</p>}
 
                                 <div className="donate-form__item">
                                     <label className="donate-form__label" htmlFor="code">Kod pocztowy</label>
                                     <input className="donate-form__input" name="code" id="code" ref={register({ required: "Pole wymagane" })} />
-                                    <ErrorMessage errors={errors} name="code" as="p" />
                                 </div>
 
+                                {errors.code && <p className="donate-form__error-msg">{errors.code.message}</p>}
+
                                 <div className="donate-form__item">
-                                    <label className="donate-form__label" htmlFor="number">Numer</label>
+                                    <label className="donate-form__label" htmlFor="number">Numer telefonu</label>
                                     <input className="donate-form__input" name="number" id="number" ref={register({ required: "Pole wymagane" })} />
-                                    <ErrorMessage errors={errors} name="number" as="p" />
                                 </div>
+
+                                {errors.number && <p className="donate-form__error-msg">{errors.number.message}</p>}
 
                             </div>
 
@@ -83,20 +87,22 @@ const AddressPage = () => {
                                 <div className="donate-form__item">
                                     <label className="donate-form__label" htmlFor="date">Data</label>
                                     <input className="donate-form__input" name="date" id="date" ref={register({ required: "Pole wymagane" })} />
-                                    <ErrorMessage errors={errors} name="date" as="p" />
                                 </div>
+
+                                {errors.date && <p className="donate-form__error-msg">{errors.date.message}</p>}
 
                                 <div className="donate-form__item">
                                     <label className="donate-form__label" htmlFor="hour">Godzina</label>
                                     <input className="donate-form__input" name="hour" id="hour" ref={register({ required: "Pole wymagane" })} />
-                                    <ErrorMessage errors={errors} name="hour" as="p" />
                                 </div>
+
+                                {errors.hour && <p className="donate-form__error-msg">{errors.hour.message}</p>}
 
                                 <div className="donate-form__item">
                                     <label className="donate-form__label" htmlFor="comments">Uwagi dla kuriera</label>
-                                    <input className="donate-form__input" name="comments" id="code" ref={register({ required: "Pole wymagane" })} />
-                                    <ErrorMessage errors={errors} name="comments" as="p" />
+                                    <input className="donate-form__input" name="comments" id="code" ref={register()} />
                                 </div>
+
                             </div>
                         </div>
 
