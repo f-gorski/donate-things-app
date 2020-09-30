@@ -45,12 +45,12 @@ const LogInForm = () => {
                         <div>
                             <label className="login-form__label" htmlFor="email">Email</label>
                             <input className="login-form__input login-form__input--focused" name="email" id="email" type="email" placeholder="Email" autocomplete="off" ref={register({ required: true, pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ })} />
-                            {errors.email && <p className="login__error-msg">"Nieprawidłowy format adresu email"</p>}
+                            {errors.email && <p className="login__error-msg">Nieprawidłowy format adresu email</p>}
                         </div>
                         <div>
                             <label className="login-form__label" htmlFor="passwordOne">Hasło</label>
                             <input className="login-form__input login-form__input--focused" name="passwordOne" id="passwordOne" type="password" placeholder="Hasło" autocomplete="off" ref={register({ required: true })} />
-                            {errors.passwordOne && <p className="login__error-msg">"Podaj hasło"</p>}
+                            {errors.passwordOne && <p className="login__error-msg">Podaj hasło</p>}
                         </div>
                         {userForm.error && <p className="login__error-msg">{userForm.error}</p>}
                     </div>
