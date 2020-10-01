@@ -1,19 +1,21 @@
 import React, { useContext } from 'react';
-import { AppContext } from '../../App';
+import { signInWithEmail } from '../../firebase';
+import { AppContext } from '../../context/AppContext';
+import { AuthContext } from '../../context/AuthContext';
 import { Link, useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
 const LogInForm = () => {
-    const { firebase, userForm, setUserForm, USER_INITIAL, setUserAuth } = useContext(AppContext);
+    const { userForm, setUserForm, USER_INITIAL } = useContext(AppContext);
+    const { userAuth, setUserAuth } = useContext(AuthContext);
+
     const history = useHistory()
     const { register, errors, handleSubmit } = useForm();
 
     const onSubmit = (formInputs) => {
         const { email, passwordOne } = formInputs;
 
-        firebase
-            .auth()
-            .signInWithEmailAndPassword(email, passwordOne)
+        signInWithEmail(email, passwordOne)
             .then(authUser => {
                 setUserAuth({ authUser });
                 setUserForm({ ...USER_INITIAL });

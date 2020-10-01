@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import { AppContext } from '../../App';
+import { AuthContext } from '../../context/AuthContext';
 
 import TypePage from './TypePage';
 import QuantityPage from './QuantityPage';
@@ -11,7 +11,8 @@ import SubmitPage from './SubmitPage';
 import Footer from '../Home/Footer';
 
 const Donate = () => {
-    const { userAuth } = useContext(AppContext);
+
+    const { userAuth } = useContext(AuthContext);
     console.log(userAuth);
     return (
         userAuth ? <DonateForm /> : <Redirect to='/logowanie' />

@@ -1,21 +1,21 @@
 import React, { useContext } from 'react';
-import { AppContext } from '../../App';
+import { createUserWithEmail } from '../../firebase';
+import { AppContext } from '../../context/AppContext';
+import { AuthContext } from '../../context/AuthContext';
 import { Link, useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
 const RegisterForm = () => {
-    const { firebase, userForm, setUserForm, error, USER_INITIAL, userAuth, setUserAuth } = useContext(AppContext);
+    const { userForm, setUserForm, error, USER_INITIAL } = useContext(AppContext);
+    const { userAuth, setUserAuth } = useContext(AuthContext);
     const history = useHistory();
-    const { register, watch, errors, handleSubmit } = useForm();
 
-    const { email, passwordOne, passwordTwo } = userForm;
+    const { register, watch, errors, handleSubmit } = useForm();
 
     const onSubmit = (formInputs) => {
         const { email, passwordOne } = formInputs;
 
-        firebase
-            .auth()
-            .createUserWithEmailAndPassword(email, passwordOne)
+        createUserWithEmail(email, passwordOne)
             .then(authUser => {
                 setUserForm({ ...USER_INITIAL });
                 setUserAuth({ authUser });
@@ -38,7 +38,6 @@ const RegisterForm = () => {
     }
 
     return (
-
         <>
             <div className="container">
                 <div className="register">
@@ -64,7 +63,6 @@ const RegisterForm = () => {
 
                             {userForm.error && <p className="register__error-msg">{userForm.error}</p>}
                         </div>
-                        
 
                         <div className="btn-wrapper">
                             <Link to='/logowanie' className="register-form__login-link">Zaloguj się</Link>

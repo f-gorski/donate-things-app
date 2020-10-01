@@ -1,12 +1,11 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { AppContext } from '../App';
+import { signOut } from '../firebase'
 
 const LogOut = () => {
-    const { firebase } = useContext(AppContext);
 
     useEffect(() => {
-        firebase.auth().signOut();
+        signOut();
     }, [])
 
     return (

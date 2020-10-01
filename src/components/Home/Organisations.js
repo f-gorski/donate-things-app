@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { AppContext } from '../../App';
+import { AppContext } from '../../context/AppContext';
 
 import OrganisationsList from './OrganisationsList';
 

@@ -1,12 +1,11 @@
 import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll';
-import { AppContext } from '../../App';
+import { AuthContext } from '../../context/AuthContext';
 
 
 const Nav = () => {
     return (
-
         <header className="header">
             <div className='container'>
                 <nav className="navigation">
@@ -20,7 +19,7 @@ const Nav = () => {
 }
 
 const NavTop = (props) => {
-    const { userAuth } = useContext(AppContext);
+    const { userAuth } = useContext(AuthContext);
     console.log(userAuth)
     const notLoggedIn =
         <div className="navigation">
