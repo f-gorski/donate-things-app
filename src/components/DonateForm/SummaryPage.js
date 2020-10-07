@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { FormContext } from './Donate';
 
+import { updateSummaryData } from '../../firebase';
+
 const SummaryPage = () => {
 
     const { formState, setFormState, page, setPage } = useContext(FormContext);
@@ -10,7 +12,8 @@ const SummaryPage = () => {
     const handlePrev = () => setPage((currPage) => currPage - 1);
 
     const handleAccept = () => {
-        setPage((currPage) => currPage + 1)
+        updateSummaryData();
+        setPage((currPage) => currPage + 1);
     }
 
     return (

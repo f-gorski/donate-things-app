@@ -3,6 +3,9 @@ import {
     signInWithEmail,
     createUserWithEmail,
     signOut,
+    getOrgsData,
+    getSummaryData,
+    updateSummaryData,
 } from './firebase';
 
 export {
@@ -10,4 +13,7 @@ export {
     signInWithEmail,
     createUserWithEmail,
     signOut,
+    getOrgsData,
+    getSummaryData,
+    updateSummaryData,
 };
