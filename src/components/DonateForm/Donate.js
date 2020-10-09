@@ -8,6 +8,7 @@ import LocationPage from './LocationPage';
 import AddressPage from './AddressPage';
 import SummaryPage from './SummaryPage';
 import SubmitPage from './SubmitPage';
+import ContactUs from '../Home/ContactUs';
 import Footer from '../Home/Footer';
 
 const Donate = () => {
@@ -98,6 +99,7 @@ const DonateForm = () => {
                 </FormContext.Provider>
             </section>
             
+            <ContactUs />
             <Footer />
         </>
     )

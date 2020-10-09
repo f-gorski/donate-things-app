@@ -1,0 +1,29 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .footer__copyright {
+        margin-left: auto;
+        margin-bottom: 22px;
+        font-size: 18px;
+        color: $primary-font-color;
+        align-self: flex-end;
+    }
+
+    .footer__social-links {
+        margin-left: auto;
+        margin-bottom: 22px;
+
+        .social-links__facebook {
+            margin-right: 10px;
+        }
+
+        .social-links__insta {
+            margin-left: 10px;
+
+        }
+    }
+}
