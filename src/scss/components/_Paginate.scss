@@ -1,0 +1,33 @@
+.paginate-nav {
+    &__list {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin-bottom: 80px;
+    }
+
+    &__button {
+        width: 40px;
+        height: 50px;
+        background: none;
+        border: none;
+        padding: 10px;
+        margin: 0 10px;
+        font-size: 18px;
+        color: $primary-font-color;
+        font-family: $font-base;
+        cursor: pointer;
+
+        &:active 
+        {
+            outline: none;
+        }
+
+        &--active {
+            @extend .paginate-nav__button;
+            outline: 1px solid $primary-font-color;
+        }
+    }
+
+}

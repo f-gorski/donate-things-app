@@ -2,11 +2,17 @@ import React, { useContext, useState, useEffect } from 'react';
 import { getOrgsData } from '../../firebase';
 
 import OrganisationsList from './OrganisationsList';
+import Pagination from './Pagination';
 
 
 const Organisations = (props) => {
-    const [orgData, setOrgData] = useState(false);
+    const [orgDesc, setOrgDesc] = useState("");
+    const [orgData, setOrgData] = useState([]);
     const [type, setType] = useState('fundacjom');
+
+    const [page, setPage] = useState(1);
+    const [orgsPerPage] = useState(3);
+
 
     useEffect(() => {
         getOrgsData(type)
@@ -14,14 +20,23 @@ const Organisations = (props) => {
                 return element.name.toLowerCase() === type
             }))
             .then((data) => {
-                setOrgData({...data[0]});
+                setOrgData(data[0].items);
+                setOrgDesc(data[0].desc);
+                setPage(1);
             })
     }, [type])
 
     const handleClick = (e) => {
         setType(e.target.name);
-        console.log(orgData)
+        console.log(orgData, orgDesc);
     }
+
+    //Get organistaions data for current page
+    const idxOfLastOrg = page * orgsPerPage;
+    const idxOfFirstOrg = idxOfLastOrg - orgsPerPage;
+    const currentOrgData = orgData.slice(idxOfFirstOrg, idxOfLastOrg);
+    
+    const paginate = (pageNumber) => setPage(pageNumber);
 
     return (
         <section id={props.id} className="section section__orgs">
@@ -35,11 +50,12 @@ const Organisations = (props) => {
                 </div>
             </div>
             <div className="orgs__text">
-                <p className="orgs__text-paragraph">{orgData.desc}</p>
+                <p className="orgs__text-paragraph">{orgDesc}</p>
             </div>
 
 
-            {orgData ? <OrganisationsList orgData={orgData} /> : null}
+            <OrganisationsList orgData={currentOrgData} />
+            <Pagination currentPage={page} itemsPerPage={orgsPerPage} totalItems={orgData.length} paginate={paginate}/>
         </section>
     )
 }

@@ -1,7 +1,10 @@
 import React from 'react';
 
 const OrganisationsList = (props) => {
-    const listToRender = props.orgData.items.map((element, idx) => {
+
+    console.log(props.orgData)
+
+    const listToRender = props.orgData.map((element, idx) => {
         return (
             <div key={idx} className="orgs__item">
                 <div className="orgs__headers">

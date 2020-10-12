@@ -99,7 +99,6 @@ const DonateForm = () => {
                 </FormContext.Provider>
             </section>
             
-            <ContactUs />
             <Footer />
         </>
     )
