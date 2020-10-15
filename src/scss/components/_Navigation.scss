@@ -21,24 +21,17 @@
         cursor: pointer;
         text-decoration: none;
         color: $primary-font-color;
+        font-family: $font-base;
+        font-weight: 400;
     }
 
     .navigation__link--start {
-        font-size: 18px;
-        padding: 10px;
-        margin: 10px;
-        cursor: pointer;
-        text-decoration: none;
-        color: $primary-font-color;
+        @extend .navigation__link;
         border: 0.75px solid $primary-font-color;
     }
 
     .navigation__link--active {
-        padding: 10px;
-        margin: 10px;
-        cursor: pointer;
-        text-decoration: none;
-        color: $primary-font-color;
+        @extend .navigation__link;
         border: 0.75px solid $golden-decoration;
     }
 

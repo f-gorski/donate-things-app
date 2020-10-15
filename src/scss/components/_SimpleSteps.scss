@@ -19,7 +19,7 @@
     .header__text {
         font-family: $font-base;
         font-size: 38px;
-        font-weight: normal;
+        font-weight: 400;
         color: $primary-font-color;
     }
 }
@@ -47,12 +47,13 @@
 
 .step__header {
     font-size: 18px;
-    font-weight: normal;
+    font-weight: 400;
     color: $primary-font-color;
 }
 
 .step__text {
     font-size: 16px;
+    font-weight: 400;
     color: $primary-font-color;
 }
 
@@ -78,6 +79,8 @@
     width: 310px;
     height: 120px;
     line-height: 45px;
+    font-family: $font-base;
+    font-weight: 300;
     border: 0.75px solid $primary-font-color;
     padding: 13px 93px;
 }

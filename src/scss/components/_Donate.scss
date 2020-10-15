@@ -4,7 +4,7 @@
 
     .img-wrapper {
         background-image: url('../../assets/Header-Form-Background.png');
-        height: 1035px;
+        height: 1038px;
         width: 50%;
         background-position: right;
         background-repeat: no-repeat;
@@ -27,7 +27,7 @@
     .donate__header {
         font-size: 38px;
         color: $primary-font-color;
-        font-weight: normal;
+        font-weight: 400;
         letter-spacing: -0.76px;
         line-height: 55px;
     }
@@ -35,7 +35,7 @@
     .donate__subheader {
         font-size: 40px;
         color: $primary-font-color;
-        font-weight: normal;
+        font-weight: 300;
         letter-spacing: -0.76px;
         line-height: 55px;
     }
@@ -68,6 +68,7 @@
             font-size: 32px;
             color: $primary-font-color;
             font-family: $font-base;
+            font-weight: 300;
         }
 
         .donate__steps-text {
@@ -79,6 +80,7 @@
           font-size: 22px;
           color: $primary-font-color;
           font-family: $font-base;
+          font-weight: 300;
         }
     }
 

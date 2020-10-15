@@ -14,6 +14,7 @@
             .donate-form__important-header {
                 color: black;
                 font-size: 36px;
+                font-weight: 600;
             }
 
             .donate-form__important-text {
@@ -35,6 +36,7 @@
         .donate-form__step-count {
             margin-top: 35px;
             color: $primary-font-color;
+            font-weight: 300;
             font-size: 24px;
         }
 
@@ -66,6 +68,7 @@
         .donate-form__label {
             margin-left: 30px;
             font-size: 24px;
+            font-weight: 300;
             color: black;   
         }
 
@@ -81,6 +84,7 @@
             width: 180px;
             height: 80px;
             font-size: 24px;
+            font-weight: 300;
             border: 0.75px solid $primary-font-color;
         }
 

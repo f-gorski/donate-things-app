@@ -6,7 +6,7 @@
 
     .register__header {
         font-size: 38px;
-        font-weight: normal;
+        font-weight: 400;
     }
 
     .register-box {
@@ -47,6 +47,10 @@
             background: none;
             margin-top: 12px;
             font-size: 16px;
+
+            &::placeholder {
+                color: $placeholder-font-color;
+            }
         }
 
         .register-form__input:last-of-type {
@@ -67,6 +71,7 @@
                 height: 50px;
                 font-size: 18px;
                 font-family: $font-base;
+                font-weight: 300;
                 color: black;
                 text-decoration: none;
                 border: 1px solid $primary-font-color;
@@ -78,6 +83,7 @@
             .register-form__login-link {
                 display: block;
                 font-size: 18px;
+                font-weight: 300;
                 line-height: 50px;
                 color: black;
                 text-decoration: none;

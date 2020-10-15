@@ -9,7 +9,7 @@
         font-family: $font-base;
         color: $primary-font-color;
         font-size: 38px;
-        font-weight: normal;
+        font-weight: 400;
         margin-top: 70px;
     }
 
@@ -24,7 +24,6 @@
         width: 208px;
         height: 79px;
         border: 0.75px solid $primary-font-color;
-        //padding: 23px 42px;
         line-height: 79px;
         text-align: center;
         font-family: $font-base;
@@ -52,34 +51,38 @@
         align-items: center;
     }
     
-    .orgs__item {
-        width: 80%;
+    .org__item {
+        width: 100%;
         border-bottom: 1px solid $primary-font-color;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 34px;
     }
     
-    .orgs__headers {
+    .org__headers {
         text-align: left;
     }
 
-    .orgs__header {
+    .org__header {
         font-size: 26px;
         font-family: $font-alt;
+        font-weight: 300;
         color: $primary-font-color;
     }
 
-    .orgs__subheader {
+    .org__subheader {
         font-size: 18px;
         font-family: $font-alt;
+        font-weight: 300;
         color: $primary-font-color;
         margin-bottom: 30px;
     }
 
-    .orgs__desc {
+    .org__desc {
         font-size: 18px;
         font-family: $font-alt;
+        font-weight: 300;
         color: $primary-font-color;
         align-self: flex-end;
         margin-bottom: 30px;

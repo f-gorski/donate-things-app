@@ -28,7 +28,7 @@
     .call-to-action__header {
         font-size: 38px;
         color: $primary-font-color;
-        font-weight: normal;
+        font-weight: 400;
         letter-spacing: -0.76px;
         line-height: 55px;
     }
@@ -45,6 +45,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        font-family: $font-base;
+        font-weight: 300;
     }
 
     .call-to-action__button {

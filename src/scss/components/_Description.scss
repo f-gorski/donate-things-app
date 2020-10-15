@@ -21,16 +21,17 @@
         .column__header {
             font-size: 90px;
             font-family: $font-base;
-            font-weight: normal;
-            color: $primary-font-color;
+            font-weight: 300;
+            color: $large-num-font-color;
         }
 
         .column__subheader {
             margin-top: 10px;
             font-size: 18px;
             font-family: $font-base;
-            font-weight: normal;
+            font-weight: 400;
             color: $primary-font-color;
+            letter-spacing: -0.36px;
             text-transform: uppercase;
         }
 
@@ -38,7 +39,10 @@
             margin-top: 28px;
             font-size: 16px;
             font-family: $font-alt;
+            font-weight: 300;
             color: $primary-font-color;
+            letter-spacing: -0.32px;
+            line-height: 18px;
         }
     }
 }
