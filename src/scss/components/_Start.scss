@@ -41,8 +41,10 @@
         font-size: 36px;
         text-decoration: none;
         color: $primary-font-color;
-        text-align: center;
         letter-spacing: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .call-to-action__button {
@@ -50,6 +52,7 @@
         background: none;
         width: 310px;
         height: 120px;
+        line-height: 45px;
         border: 0.75px solid $primary-font-color;
         padding: 13px 93px;
     }

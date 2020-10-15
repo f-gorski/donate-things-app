@@ -21,10 +21,11 @@
     .orgs__btn {
         cursor: pointer;
         background: none;
-        width: 210px;
-        height: 85px;
+        width: 208px;
+        height: 79px;
         border: 0.75px solid $primary-font-color;
-        padding: 20px 40px;
+        //padding: 23px 42px;
+        line-height: 79px;
         text-align: center;
         font-family: $font-base;
         color: $primary-font-color;
