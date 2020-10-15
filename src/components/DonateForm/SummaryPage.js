@@ -28,12 +28,12 @@ const SummaryPage = () => {
                             <h3 className="donate-form__subheader">Oddajesz:</h3>
 
                             <div className="donate-form__item">
-                                <img className="donate-form__icon" src={require("../../assets/Icon-1.svg")} />
+                                <img className="donate-form__icon" src={require("../../assets/Icon-1.svg")} alt="ikona przedmiot"/>
                                 <p className="donate-form__donationSpecs">{page2.quantity} worków, {page1.itemType}</p>
                             </div>
 
                             <div className="donate-form__item">
-                                <img className="donate-form__icon" src={require("../../assets/Icon-4.svg")} />
+                                <img className="donate-form__icon" src={require("../../assets/Icon-4.svg")} alt="ikona lokalizacja" />
                                 <p className="donate-form__donationSpecs">dla lokalizacji: {page3.localization}</p>
                             </div>
                         </div>
