@@ -1,6 +1,10 @@
 .section__orgs {
     text-align: center;
 
+    .container {
+        flex-direction: column;
+    }
+
     .orgs__header {
         font-family: $font-base;
         color: $primary-font-color;

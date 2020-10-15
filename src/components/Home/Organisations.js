@@ -35,27 +35,28 @@ const Organisations = (props) => {
     const idxOfLastOrg = page * orgsPerPage;
     const idxOfFirstOrg = idxOfLastOrg - orgsPerPage;
     const currentOrgData = orgData.slice(idxOfFirstOrg, idxOfLastOrg);
-    
+
     const paginate = (pageNumber) => setPage(pageNumber);
 
     return (
         <section id={props.id} className="section section__orgs">
-            <h2 className="orgs__header">Komu pomagamy?</h2>
-            <img src={require('../../assets/Decoration.svg')} className="decoration"/>
-            <div className="orgs_btns-wrapper">
-                <div className="orgs__btns">
-                    <button name="fundacjom" onClick={handleClick} className="orgs__btn">Fundacjom</button>
-                    <button name="organizacjom" onClick={handleClick} className="orgs__btn">Organizacjom</button>
-                    <button name="zbiórkom" onClick={handleClick} className="orgs__btn"> Zbiórkom</button>
+            <div className="container">
+                <h2 className="orgs__header">Komu pomagamy?</h2>
+                <img src={require('../../assets/Decoration.svg')} className="decoration" />
+                <div className="orgs_btns-wrapper">
+                    <div className="orgs__btns">
+                        <button name="fundacjom" onClick={handleClick} className="orgs__btn">Fundacjom</button>
+                        <button name="organizacjom" onClick={handleClick} className="orgs__btn">Organizacjom</button>
+                        <button name="zbiórkom" onClick={handleClick} className="orgs__btn"> Zbiórkom</button>
+                    </div>
                 </div>
-            </div>
-            <div className="orgs__text">
-                <p className="orgs__text-paragraph">{orgDesc}</p>
-            </div>
+                <div className="orgs__text">
+                    <p className="orgs__text-paragraph">{orgDesc}</p>
+                </div>
 
-
-            <OrganisationsList orgData={currentOrgData} />
-            <Pagination currentPage={page} itemsPerPage={orgsPerPage} totalItems={orgData.length} paginate={paginate}/>
+                <OrganisationsList orgData={currentOrgData} />
+                <Pagination currentPage={page} itemsPerPage={orgsPerPage} totalItems={orgData.length} paginate={paginate} />
+            </div>
         </section>
     )
 }
