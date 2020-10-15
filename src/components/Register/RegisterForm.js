@@ -60,7 +60,7 @@ const RegisterForm = () => {
                             <div>
                                 <label className="register-form__label" htmlFor="passwordTwo">Powtórz hasło</label>
                                 <input className="register-form__input register-form__input--focused" name="passwordTwo" id="passwordTwo" type="password" placeholder="Hasło" autocomplete="off" ref={register({ required: true, validate: (value) => value === watch('passwordOne') })} />
-                                {errors.passwordTwo && <p className="register__error-msg">"Hasła muszą być zgodne"</p>}
+                                {errors.passwordTwo && <p className="register__error-msg">Hasła muszą być zgodne</p>}
                             </div>
 
                             {userForm.error && <p className="register__error-msg">{userForm.error}</p>}
