@@ -31,11 +31,23 @@ const getSummaryData = async () => {
   return data.val();
 }
 
-const updateSummaryData = () => {
-  for (let itemIdx = 0; itemIdx < 3; itemIdx++) {
-      firebase.database().ref(`donationsSummary/${itemIdx}/counter`).transaction(counter => (counter || 0) + 1);
-  }
+const updateSummaryData = (quantity) => {
+
+  firebase.database().ref(`donationsSummary`).transaction(items => {
+    if (items) {
+      items.forEach(item => {
+        if (item.header == "ODDANYCH WORKÓW") {
+          item.counter += Number(quantity);
+        } else if (item.header == "WSPARTYCH ORGANIZACJI") {
+          item.counter++
+        }
+      })
+    }
+
+    return items;
+  });
 }
+
 
 export {
   firebase,

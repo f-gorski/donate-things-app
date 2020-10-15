@@ -12,7 +12,7 @@ const SummaryPage = () => {
     const handlePrev = () => setPage((currPage) => currPage - 1);
 
     const handleAccept = () => {
-        updateSummaryData();
+        updateSummaryData(page2.quantity);
         setPage((currPage) => currPage + 1);
     }
 
