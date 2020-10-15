@@ -4,19 +4,6 @@ import { FormContext } from './Donate';
 
 const AddressPage = () => {
 
-    const inputAddressItems = [
-        { id: 1, type: "text", label: "Ulica", name: "street" },
-        { id: 2, type: "text", label: "Miasto", name: "city" },
-        { id: 3, type: "text", label: "Kod pocztowy", name: "code" },
-        { id: 4, type: "text", label: "Numer", name: "number" }
-    ]
-
-    const inputDateItems = [
-        { id: 5, type: "text", label: "Data", name: "date" },
-        { id: 6, type: "text", label: "Godzina", name: "hour" },
-        { id: 7, type: "textarea", label: "Uwagi dla kuriera", name: "comments" }
-    ]
-
     const { formState, setFormState, page, setPage } = useContext(FormContext);
     const { handleSubmit, register, errors } = useForm({
         defaultValues: formState.page4

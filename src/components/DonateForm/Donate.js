@@ -70,7 +70,7 @@ const DonateForm = () => {
                     <div className="img-wrapper"></div>
                     <div className="donate">
                         <h1 className="donate__header">Oddaj rzeczy których już nie chcesz <br /> POTRZEBUJĄCYM</h1>
-                        <img className="decoration" src={require("../../assets/Decoration.svg")}/>
+                        <img className="decoration" src={require("../../assets/Decoration.svg")} alt=""/>
                         <h2 className="donate__subheader">Wystarczą 4 proste kroki:</h2>
                         <div className="donate__steps">
                             <div className="donate__steps-item">

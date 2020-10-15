@@ -8,7 +8,7 @@ import Icon4 from '../../assets/Icon-4.svg';
 
 import Step from './Step';
 
-const stepsData = [
+const STEPS_DATA = [
     {
         icon: {
             src: Icon1,
@@ -44,13 +44,13 @@ const stepsData = [
 ]
 
 const SimpleSteps = (props) => {
-    const stepsToRender = stepsData.map( (step) => <Step data={step} />)
+    const stepsToRender = STEPS_DATA.map( (step, idx) => <Step data={step} key={idx} />)
 
     return (
         <>
         <div className="steps__header">
             <h3 className="header__text">Wystarczą 4 proste kroki</h3>
-            <img src={require('../../assets/Decoration.svg')} className="decoration" />
+            <img src={require('../../assets/Decoration.svg')} className="decoration" alt=""/>
         </div>
         <div className={props.className}>
             <div className="container">

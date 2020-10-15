@@ -45,7 +45,7 @@ const ContactUs = (props) => {
                 <div className="container">
                     <div className="section__contact-form">
                         <h2 className="contact-form__header">Skontaktuj się z nami</h2>
-                        <img src={require('../../assets/Decoration.svg')} className="decoration" />
+                        <img src={require('../../assets/Decoration.svg')} className="decoration" alt=""/>
 
                         {resultSubmit()}
 
@@ -53,7 +53,7 @@ const ContactUs = (props) => {
                             <div className="contact-form__credentials">
                                 <label htmlFor="name" className="contact-form__label">
                                     Wpisz swoje imię
-                                <input type="text" name="name" id="name" placeholder="Imię" autocomplete="off" className="contact-form__input contact-form__input--focused" ref={register({ required: true, pattern: /^[A-Za-z]+$/ })} />
+                                <input type="text" name="name" id="name" placeholder="Imię" autoComplete="off" className="contact-form__input contact-form__input--focused" ref={register({ required: true, pattern: /^[A-Za-z]+$/ })} />
                                     {errors.name?.type === 'required' && 
                                     <p className="contact-form__error-msg">Pole wymagane</p>}
 
@@ -65,7 +65,7 @@ const ContactUs = (props) => {
 
                                 <label htmlFor="email" className="contact-form__label">
                                     Wpisz swój email
-                                <input type="text" inputmode="email" name="email" id="email" placeholder="Email" autocomplete="off" className="contact-form__input contact-form__input--focused" ref={register({ required: true, pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ })} />
+                                <input type="text" inputMode="email" name="email" id="email" placeholder="Email" autoComplete="off" className="contact-form__input contact-form__input--focused" ref={register({ required: true, pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ })} />
                                     {errors.email?.type === 'required' && 
                                     <p className="contact-form__error-msg">Pole wymagane</p>}
 

@@ -42,7 +42,7 @@ const Organisations = (props) => {
         <section id={props.id} className="section section__orgs">
             <div className="container">
                 <h2 className="orgs__header">Komu pomagamy?</h2>
-                <img src={require('../../assets/Decoration.svg')} className="decoration" />
+                <img src={require('../../assets/Decoration.svg')} className="decoration" alt="" />
                 <div className="orgs_btns-wrapper">
                     <div className="orgs__btns">
                         <button name="fundacjom" onClick={handleClick} className="orgs__btn">Fundacjom</button>
