@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 
 const LogInForm = () => {
     const { userForm, setUserForm, USER_INITIAL } = useContext(AppContext);
-    const { userAuth, setUserAuth } = useContext(AuthContext);
+    const { setUserAuth } = useContext(AuthContext);
 
     const history = useHistory()
     const { register, errors, handleSubmit } = useForm();
@@ -31,6 +31,8 @@ const LogInForm = () => {
                     case "auth/user-not-found":
                         errorMsg = "Użytkownik nie istnieje"
                         break;
+                    default: 
+                        break;
                 }
 
                 setUserForm({ error: errorMsg });
@@ -41,7 +43,7 @@ const LogInForm = () => {
         <div className="container">
             <div className="login">
                 <h1 className="login-form__header">Zaloguj się</h1>
-                <img src={require('../../assets/Decoration.svg')} className="decoration" />
+                <img src={require('../../assets/Decoration.svg')} className="decoration" alt="" />
                 <form onSubmit={handleSubmit(onSubmit)} className="login-form">
                     <div className="login-box">
                         <div>

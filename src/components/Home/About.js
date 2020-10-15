@@ -8,7 +8,7 @@ const About = (props) => {
                     <h2 className="about__header">O nas</h2>
                     <img src={require('../../assets/Decoration.svg')} className="decoration" alt="" />
                     <p className="about__paragraph">Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
-                    <img src={require('../../assets/Signature.png')} className="signature" />
+                    <img src={require('../../assets/Signature.png')} className="signature" alt="podpis" />
                 </div>
             </div>
             <div className="about__img-wrapper"></div>

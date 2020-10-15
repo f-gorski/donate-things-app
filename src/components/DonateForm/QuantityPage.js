@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { useForm, ErrorMessage } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { FormContext } from './Donate';
 
 const QuantityPage = () => {
-    const { formState, setFormState, page, setPage } = useContext(FormContext);
+    const { formState, setFormState, setPage } = useContext(FormContext);
     const { handleSubmit, register, errors } = useForm({
         defaultValues: formState.page2
     });

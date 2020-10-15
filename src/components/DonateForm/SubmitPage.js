@@ -1,8 +1,6 @@
 import React from 'react';
 
 const SubmitPage = () => {
-
-
     return (
         <div className="donate-form__stepSubmit">
                 <div className="container">

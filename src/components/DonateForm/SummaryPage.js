@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { FormContext } from './Donate';
 
 import { updateSummaryData } from '../../firebase';
 
 const SummaryPage = () => {
 
-    const { formState, setFormState, page, setPage } = useContext(FormContext);
+    const { formState, setPage } = useContext(FormContext);
 
     const { page1, page2, page3, page4 } = formState;
 
@@ -28,7 +28,7 @@ const SummaryPage = () => {
                             <h3 className="donate-form__subheader">Oddajesz:</h3>
 
                             <div className="donate-form__item">
-                                <img className="donate-form__icon" src={require("../../assets/Icon-1.svg")} alt="ikona przedmiot"/>
+                                <img className="donate-form__icon" src={require("../../assets/Icon-1.svg")} alt="ikona przedmiot" />
                                 <p className="donate-form__donationSpecs">{page2.quantity} worków, {page1.itemType}</p>
                             </div>
 

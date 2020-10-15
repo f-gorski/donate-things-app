@@ -36,9 +36,9 @@ const updateSummaryData = (quantity) => {
   firebase.database().ref(`donationsSummary`).transaction(items => {
     if (items) {
       items.forEach(item => {
-        if (item.header == "ODDANYCH WORKÓW") {
+        if (item.header === "ODDANYCH WORKÓW") {
           item.counter += Number(quantity);
-        } else if (item.header == "WSPARTYCH ORGANIZACJI") {
+        } else if (item.header === "WSPARTYCH ORGANIZACJI") {
           item.counter++
         }
       })

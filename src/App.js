@@ -1,11 +1,9 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React from 'react';
 import './App.scss';
 import {
   HashRouter,
-  Link,
   Switch,
   Route,
-  withRouter
 } from 'react-router-dom';
 
 import { AuthProvider } from './context/AuthContext';

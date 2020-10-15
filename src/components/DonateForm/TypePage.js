@@ -1,9 +1,9 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { useForm, ErrorMessage } from "react-hook-form";
+import React, { useContext } from 'react';
+import { useForm } from "react-hook-form";
 import { FormContext } from './Donate';
 
 const TypePage = () => {
-    const { formState, setFormState, page, setPage } = useContext(FormContext);
+    const { formState, setFormState, setPage } = useContext(FormContext);
     const { handleSubmit, register, errors } = useForm({
         defaultValues: formState.page1
     });

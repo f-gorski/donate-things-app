@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 
 const RegisterForm = () => {
     const { userForm, setUserForm, error, USER_INITIAL } = useContext(AppContext);
-    const { userAuth, setUserAuth } = useContext(AuthContext);
+    const { setUserAuth } = useContext(AuthContext);
     const history = useHistory();
 
     const { register, watch, errors, handleSubmit } = useForm();
@@ -31,6 +31,8 @@ const RegisterForm = () => {
                     case "auth/network-request-failed":
                         errorMsg = "Wystąpił błąd sieci. Rejestracja nie powiodła się"
                         break;
+                    default:
+                        break;
                 }
 
                 setUserForm({ error: errorMsg });
@@ -42,7 +44,7 @@ const RegisterForm = () => {
             <div className="container">
                 <div className="register">
                     <h1 className="register-form__header">Załóż konto</h1>
-                    <img src={require('../../assets/Decoration.svg')} className="decoration" />
+                    <img src={require('../../assets/Decoration.svg')} className="decoration" alt="" />
                     <form onSubmit={handleSubmit(onSubmit)} className="register-form">
                         <div className="register-box">
                             <div>
