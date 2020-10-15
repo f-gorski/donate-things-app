@@ -50,12 +50,12 @@ const RegisterForm = () => {
                             <div>
                                 <label className="register-form__label" htmlFor="email">Email</label>
                                 <input className="register-form__input register-form__input--focused" name="email" id="email" type="email" placeholder="Email" autocomplete="off" ref={register({ required: true, pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ })} />
-                                {errors.email && <p className="register__error-msg">"Nieprawidłowy adres email"</p>}
+                                {errors.email && <p className="register__error-msg">Nieprawidłowy adres email</p>}
                             </div>
                             <div>
                                 <label className="register-form__label" htmlFor="passwordOne">Hasło</label>
                                 <input className="register-form__input register-form__input--focused" name="passwordOne" id="passwordOne" type="password" placeholder="Hasło" autocomplete="off" ref={register({ required: true, minLength: 6, maxLength: 20 })} />
-                                {errors.passwordOne && <p className="register__error-msg">"Hasło musi mieć między 6 a 20 znaków"</p>}
+                                {errors.passwordOne && <p className="register__error-msg">Hasło musi mieć między 6 a 20 znaków</p>}
                             </div>
                             <div>
                                 <label className="register-form__label" htmlFor="passwordTwo">Powtórz hasło</label>
