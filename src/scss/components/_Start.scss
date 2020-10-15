@@ -1,16 +1,17 @@
 .section__start {
     display: flex;
     width: 100%;
+    height: 770px;
 
     .img-wrapper {
         background-image: url('../../assets/Home-Hero-Image.jpg');
-        height: 885px;
+        height: 1062px;
         width: 35%;
         background-position: right;
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
-        top: 45px;
+        top: -135px;
         left: 0;
       }
     
