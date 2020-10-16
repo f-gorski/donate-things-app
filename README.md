@@ -1,4 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Donate-things concept application
+Project of web application that would allow the user to donate unused things to various charity organisations.
+The concept facilitates the user to specify details of his donation for the middle-party (site operator) to collect the things and donate them to the charity. 
+
+## Live demo
+<b>Live demo available: [https://donate-things.web.app/](https://donate-things.web.app/)</b>
+<br/><br/>
+Disclaimer: This project is currently not RWD and best displayed on desktop, for responsiveness please check my other and all future projects which are mobile-first approach.
+
+## Completed features
+* Landing page
+* Donations summary counters displayed on Landing page, gathered from Firebase Realtime Database
+* Contact Us form pointing to the fake API endpoint which returns success response if data is valid (frontend validation also applied)
+* User authentication via Firebase. Register, LogIn and LogOut methods with email and password available
+* Protected routing, which allows access to the main Donation Form for the authenticated user.
+* Main Donation Form - Multi step validated form, which facilitates the user to provide details of the donation
+
+## To Do
+* Assignment of the Donate Form data to the user in the database
+* User profile interface allowing to review and manage her/his donations
+
+## Technologies
+* HTML5
+* CSS/Sass (BEM methodology)
+* Javascript (ES6)
+* React (Hooks)
+* Context API
+* Firebase
+* Webpack
+
+## Installation
+
+Installation requires npm (node package manager). After the project is cloned, all packages and dependences can be downloaded with the command:
+
+### `npm install`
 
 ## Available Scripts
 
@@ -11,11 +45,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
