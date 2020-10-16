@@ -61,8 +61,6 @@ const ContactUs = (props) => {
                                     <p className="contact-form__error-msg">Podane imię jest nieprawidłowe!</p>}
                                 </label>
 
-                                {console.log(errors.name)}
-
                                 <label htmlFor="email" className="contact-form__label">
                                     Wpisz swój email
                                 <input type="text" inputMode="email" name="email" id="email" placeholder="Email" autoComplete="off" className="contact-form__input contact-form__input--focused" ref={register({ required: true, pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ })} />
@@ -72,8 +70,6 @@ const ContactUs = (props) => {
                                     {errors.email?.type === 'pattern' && 
                                     <p className="contact-form__error-msg">Podany email jest nieprawidłowy!</p>}
                                 </label>
-
-                                {console.log(errors.email)}
 
                             </div>
 

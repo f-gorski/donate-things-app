@@ -11,9 +11,7 @@ import SubmitPage from './SubmitPage';
 import Footer from '../Home/Footer';
 
 const Donate = () => {
-
     const { userAuth } = useContext(AuthContext);
-    console.log(userAuth);
     return (
         userAuth ? <DonateForm /> : <Redirect to='/logowanie' />
     )

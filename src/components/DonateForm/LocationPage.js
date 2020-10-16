@@ -14,7 +14,6 @@ const LocationPage = () => {
             newState.page3 = data;
             return newState;
         });
-        console.log(formState);
         setPage((currPage) => currPage + 1);
     }
 

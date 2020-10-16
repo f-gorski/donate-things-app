@@ -9,12 +9,10 @@ const TypePage = () => {
     });
 
     const onSubmit = (data) => {
-        console.log(data)
         setFormState(newState => {
             newState.page1 = data;
             return newState;
         });
-        console.log(formState);
         setPage((currPage) => currPage + 1);
     }
 

@@ -7,10 +7,8 @@ export const AuthProvider = (props) => {
 
     const [userAuth, setUserAuth] = useState(null);
 
-    //Listen for authentication change
     useEffect(() => {
         firebase.auth().onAuthStateChanged(authUser => {
-        console.log(authUser);
         authUser
             ? setUserAuth({ authUser })
             : setUserAuth(null);

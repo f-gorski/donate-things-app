@@ -1,13 +1,11 @@
-//---General--
+
 @import './scss/reset';
 @import './scss/settings/fonts';
 @import './scss/settings/colors';
 @import './scss/base';
 
-//---Navigation components---
 @import './scss/components/Navigation';
 
-//---Home components---
 @import './scss/components/Start';
 @import './scss/components/Description';
 @import './scss/components/SimpleSteps';
@@ -17,12 +15,10 @@
 @import './scss/components/ContactUs';
 @import './scss/components/FooterLinks';
 
-//Authentification components
 @import './scss/components/Login';
 @import './scss/components/Register';
 @import './scss/components/LogOut';
 
-//DonateForm components
 @import './scss/components/Donate';
 @import './scss/components/TypePage';
 @import './scss/components/QuantityPage';

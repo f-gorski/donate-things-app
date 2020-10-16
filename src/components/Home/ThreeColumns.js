@@ -18,7 +18,6 @@ const ThreeColumns = (props) => {
         <div className={props.className}>
             {columnsToRender}
         </div>
-        
     ) 
 }
 

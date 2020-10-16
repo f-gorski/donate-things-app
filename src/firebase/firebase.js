@@ -1,7 +1,6 @@
 import Firebase from "firebase";
 import firebaseConfig from "./config";
 
-//Firebase initialization
 const firebase = Firebase.initializeApp(firebaseConfig);
 
 const signInWithEmail = (email, password) => {
@@ -16,7 +15,6 @@ const signOut = () => {
   return firebase.auth().signOut();
 }
 
-//Firebase database handling
 const organisationsRef = firebase.database().ref('organisations');
 
 const getOrgsData = async (type) => {

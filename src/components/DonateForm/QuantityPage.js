@@ -14,7 +14,6 @@ const QuantityPage = () => {
             newState.page2.quantity = data.quantity;
             return newState;
         });
-        console.log(formState);
         setPage((currPage) => currPage + 1);
     }
 

@@ -28,10 +28,8 @@ const Organisations = (props) => {
 
     const handleClick = (e) => {
         setType(e.target.name);
-        console.log(orgData, orgDesc);
     }
 
-    //Get organistaions data for current page
     const idxOfLastOrg = page * orgsPerPage;
     const idxOfFirstOrg = idxOfLastOrg - orgsPerPage;
     const currentOrgData = orgData.slice(idxOfFirstOrg, idxOfLastOrg);

@@ -4,7 +4,6 @@ export const AppContext = createContext({});
 
 export const AppProvider = (props) => {
 
-    //set initial user data as empty
     const USER_INITIAL = {
         email: '',
         passwordOne: "",

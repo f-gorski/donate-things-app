@@ -20,7 +20,6 @@ const Nav = () => {
 
 const NavTop = (props) => {
     const { userAuth } = useContext(AuthContext);
-    console.log(userAuth)
     const notLoggedIn =
         <div className="navigation">
             <ul className="navigation__links">

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const FooterLinks = () => {
-
     return (
         <footer className="footer">
             <div className="container">

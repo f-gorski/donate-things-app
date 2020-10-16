@@ -14,7 +14,6 @@ const AddressPage = () => {
             newState.page4 = data;
             return newState;
         });
-        console.log(formState);
         data ? setPage((currPage) => currPage + 1) : alert("Wpisz dane");
     }
 
