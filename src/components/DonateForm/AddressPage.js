@@ -51,8 +51,6 @@ const AddressPage = () => {
                                     <p className="donate-form__error-msg">Podany adres jest nieprawidłowy</p>
                                 }
 
-                                {errors.street && <p className="donate-form__error-msg">{errors.street.message}</p>}
-
                                 <div className="donate-form__item">
                                     <label className="donate-form__label" htmlFor="city">Miasto</label>
                                     <input className="donate-form__input" name="city" id="city" ref={register({ required: true, pattern: /^[a-zA-Z-zżźćńółęąśŻŹĆĄŚĘŁÓŃ [-]+$/ })} />
@@ -64,8 +62,6 @@ const AddressPage = () => {
                                 {errors.city?.type === 'pattern' &&
                                     <p className="donate-form__error-msg">Podana nazwa miasta jest nieprawidłowa</p>
                                 }
-
-                                {errors.city && <p className="donate-form__error-msg">{errors.city.message}</p>}
 
                                 <div className="donate-form__item">
                                     <label className="donate-form__label" htmlFor="code">Kod pocztowy</label>
@@ -79,8 +75,6 @@ const AddressPage = () => {
                                     <p className="donate-form__error-msg">Podany kod pocztowy jest nieprawidłowy</p>
                                 }
 
-                                {errors.code && <p className="donate-form__error-msg">{errors.code.message}</p>}
-
                                 <div className="donate-form__item">
                                     <label className="donate-form__label" htmlFor="number">Numer telefonu</label>
                                     <input className="donate-form__input" name="number" id="number" placeholder="np. 123456789" ref={register({ required: true, pattern: /^[0-9\+]{8,13}$/ })} />
@@ -92,8 +86,6 @@ const AddressPage = () => {
                                 {errors.number?.type === 'pattern' &&
                                     <p className="donate-form__error-msg">Podany numer telefonu jest nieprawidłowy</p>
                                 }
-
-                                {errors.number && <p className="donate-form__error-msg">{errors.number.message}</p>}
 
                             </div>
 
@@ -111,8 +103,6 @@ const AddressPage = () => {
                                     <p className="donate-form__error-msg">Podana data jest nieprawidłowa</p>
                                 }
 
-                                {errors.date && <p className="donate-form__error-msg">{errors.date.message}</p>}
-
                                 <div className="donate-form__item">
                                     <label className="donate-form__label" htmlFor="hour">Godzina</label>
                                     <input className="donate-form__input" name="hour" id="hour" placeholder="np. 09:59" ref={register({ required: true, pattern: /^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/ })} />
@@ -124,8 +114,6 @@ const AddressPage = () => {
                                 {errors.hour?.type === 'pattern' &&
                                     <p className="donate-form__error-msg">Podana godzina jest nieprawidłowa</p>
                                 }
-
-                                {errors.hour && <p className="donate-form__error-msg">{errors.hour.message}</p>}
 
                                 <div className="donate-form__item">
                                     <label className="donate-form__label" htmlFor="comments">Uwagi dla kuriera</label>
